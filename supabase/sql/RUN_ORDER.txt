@@ -1,0 +1,34 @@
+Himmat Oil Fields — Supabase SQL run order
+==========================================
+
+Open: Supabase Dashboard → SQL Editor → New query
+
+Run each file below IN ORDER (wait for success before the next):
+
+  1. supabase/sql/01_extensions_and_functions.sql
+  2. supabase/sql/02_enums.sql
+  3. supabase/sql/03_categories_and_brands.sql
+  4. supabase/sql/04_products_migration.sql
+  5. supabase/sql/05_product_images.sql
+  6. supabase/sql/06_product_impa.sql
+  7. supabase/sql/07_profiles_and_addresses.sql
+  8. supabase/sql/08_carts_and_cart_items.sql
+  9. supabase/sql/09_orders_and_order_items.sql
+ 10. supabase/sql/10_row_level_security.sql
+ 11. supabase/sql/11_optional_impa_pricing.sql
+ 12. supabase/sql/12_ecommerce_completion.sql
+
+Each file shows a success message when done.
+
+After step 12:
+  - Restart your Next.js dev server
+  - Open /admin/products to add IMPA entries
+
+Optional: run all at once via
+  npm run db:migrate
+(if SUPABASE_DB_URL is set in .env.local)
+
+Tables created:
+  categories, brands, products, product_images, product_impa,
+  profiles, addresses, carts, cart_items,
+  orders, order_items, order_status_history

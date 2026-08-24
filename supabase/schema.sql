@@ -1,0 +1,7 @@
+-- Full migration is split into easy steps.
+-- See: supabase/sql/RUN_ORDER.txt
+--
+-- Run files 01 through 10 in supabase/sql/ folder, in order.
+--
+-- Or run the combined file:
+--   supabase/migrations/001_normalized_ecommerce.sql

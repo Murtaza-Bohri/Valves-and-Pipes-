@@ -1,0 +1,132 @@
+{
+  "categorySlug": "valves",
+  "defaultImage": "/products/valves.png",
+  "products": [
+    {
+      "name": "Globe Valve Bronze Flanged-End, F7301 5KG",
+      "image": "/products/valves/globe-valve-f7301-5kg.png",
+      "impa": [
+        { "number": "750121", "description": "15MM", "uom": "PCS", "price": 190 },
+        { "number": "750122", "description": "20MM", "uom": "PCS", "price": 265 },
+        { "number": "750123", "description": "25MM", "uom": "PCS", "price": 300 },
+        { "number": "750124", "description": "32MM", "uom": "PCS", "price": 450 },
+        { "number": "750125", "description": "40MM", "uom": "PCS", "price": 550 },
+        { "number": "750126", "description": "50MM", "uom": "PCS", "price": 1350 },
+        { "number": "750127", "description": "65MM", "uom": "PCS", "price": 1550 }
+      ]
+    },
+    {
+      "name": "Globe Valve Bronze Flanged-End, F7303 16KG",
+      "impa": [
+        { "number": "750141", "description": "15MM", "uom": "PCS", "price": 275 },
+        { "number": "750142", "description": "20MM", "uom": "PCS", "price": 350 },
+        { "number": "750143", "description": "25MM", "uom": "PCS", "price": 475 },
+        { "number": "750144", "description": "32MM", "uom": "PCS", "price": 575 },
+        { "number": "750145", "description": "40MM", "uom": "PCS", "price": 675 }
+      ]
+    },
+    {
+      "name": "Angle Valve Bronze Flanged-End, F7304 16KG",
+      "impa": [
+        { "number": "750151", "description": "15MM", "uom": "PCS", "price": 275 },
+        { "number": "750152", "description": "20MM", "uom": "PCS", "price": 350 },
+        { "number": "750153", "description": "25MM", "uom": "PCS", "price": 475 },
+        { "number": "750154", "description": "32MM", "uom": "PCS", "price": 575 },
+        { "number": "750155", "description": "40MM", "uom": "PCS", "price": 675 }
+      ]
+    },
+    {
+      "name": "Globe Valve Bronze Flanged-End, Union Bonnet F7346 5KG",
+      "impa": [
+        { "number": "750501", "description": "15MM", "uom": "PCS", "price": 200 },
+        { "number": "750502", "description": "20MM", "uom": "PCS", "price": 275 },
+        { "number": "750503", "description": "25MM", "uom": "PCS", "price": 350 },
+        { "number": "750504", "description": "32MM", "uom": "PCS", "price": 500 },
+        { "number": "750505", "description": "40MM", "uom": "PCS", "price": 600 }
+      ]
+    },
+    {
+      "name": "Globe Valve Bronze Flanged-End, Union Bonnet F7348 16KG",
+      "impa": [
+        { "number": "750521", "description": "15MM", "uom": "PCS", "price": 295 },
+        { "number": "750522", "description": "20MM", "uom": "PCS", "price": 375 },
+        { "number": "750523", "description": "25MM", "uom": "PCS", "price": 525 },
+        { "number": "750524", "description": "32MM", "uom": "PCS", "price": 625 },
+        { "number": "750525", "description": "40MM", "uom": "PCS", "price": 725 }
+      ]
+    },
+    {
+      "name": "Gate Valve Bronze Flanged-End, Rising-Stem F7367 5KG",
+      "impa": [
+        { "number": "750951", "description": "15MM", "uom": "PCS", "price": 250 },
+        { "number": "750952", "description": "20MM", "uom": "PCS", "price": 315 },
+        { "number": "750953", "description": "25MM", "uom": "PCS", "price": 375 },
+        { "number": "750954", "description": "32MM", "uom": "PCS", "price": 475 },
+        { "number": "750955", "description": "40MM", "uom": "PCS", "price": 575 }
+      ]
+    },
+    {
+      "name": "Gate Valve Bronze Flanged-End, Rising-Stem F7368 10KG",
+      "impa": [
+        { "number": "750961", "description": "15MM", "uom": "PCS", "price": 315 },
+        { "number": "750962", "description": "20MM", "uom": "PCS", "price": 415 },
+        { "number": "750963", "description": "25MM", "uom": "PCS", "price": 515 },
+        { "number": "750964", "description": "32MM", "uom": "PCS", "price": 650 },
+        { "number": "750965", "description": "40MM", "uom": "PCS", "price": 750 }
+      ]
+    },
+    {
+      "name": "Globe Valve Screw Down Check, Bronze Flanged F7351 5KG",
+      "impa": [
+        { "number": "751051", "description": "15MM", "uom": "PCS", "price": 185 },
+        { "number": "751052", "description": "20MM", "uom": "PCS", "price": 275 },
+        { "number": "751053", "description": "25MM", "uom": "PCS", "price": 315 },
+        { "number": "751054", "description": "32MM", "uom": "PCS", "price": 450 },
+        { "number": "751055", "description": "40MM", "uom": "PCS", "price": 550 }
+      ]
+    },
+    {
+      "name": "Angle Valve Screw Down Check, Bronze Flanged F7352 5KG",
+      "impa": [
+        { "number": "751061", "description": "15MM", "uom": "PCS", "price": 185 },
+        { "number": "751062", "description": "20MM", "uom": "PCS", "price": 275 },
+        { "number": "751063", "description": "25MM", "uom": "PCS", "price": 315 },
+        { "number": "751064", "description": "32MM", "uom": "PCS", "price": 450 },
+        { "number": "751065", "description": "40MM", "uom": "PCS", "price": 550 }
+      ]
+    },
+    {
+      "name": "Globe Valve Screw Down Check, Bronze Flanged F7409 16KG",
+      "impa": [
+        { "number": "751071", "description": "15MM", "uom": "PCS", "price": 275 },
+        { "number": "751072", "description": "20MM", "uom": "PCS", "price": 325 },
+        { "number": "751073", "description": "25MM", "uom": "PCS", "price": 475 },
+        { "number": "751074", "description": "32MM", "uom": "PCS", "price": 550 },
+        { "number": "751075", "description": "40MM", "uom": "PCS", "price": 675 }
+      ]
+    },
+    {
+      "name": "Angle Valve Screw Down Check, Bronze Flanged F7410 16KG",
+      "impa": [
+        { "number": "751081", "description": "15MM", "uom": "PCS", "price": 275 },
+        { "number": "751082", "description": "20MM", "uom": "PCS", "price": 325 },
+        { "number": "751083", "description": "25MM", "uom": "PCS", "price": 475 },
+        { "number": "751084", "description": "32MM", "uom": "PCS", "price": 550 },
+        { "number": "751085", "description": "40MM", "uom": "PCS", "price": 675 }
+      ]
+    },
+    {
+      "name": "Hose Valves Bronze, Flange & Screw F7334",
+      "impa": [
+        { "number": "751701", "description": "Globe Hose Valve 5KG-15MM", "uom": "PCS", "price": 200 },
+        { "number": "751702", "description": "Globe Hose Valve 10KG-15MM", "uom": "PCS", "price": 275 },
+        { "number": "751703", "description": "Globe Hose Valve 5KG-25MM", "uom": "PCS", "price": 325 },
+        { "number": "751704", "description": "Globe Hose Valve 10KG-25MM", "uom": "PCS", "price": 415 },
+        { "number": "751706", "description": "Angle Hose Valve 5KG-15MM", "uom": "PCS", "price": 215 },
+        { "number": "751707", "description": "Angle Hose Valve 10KG-15MM", "uom": "PCS", "price": 275 },
+        { "number": "751708", "description": "Angle Hose Valve 5KG-25MM", "uom": "PCS", "price": 325 },
+        { "number": "751709", "description": "Angle Hose Valve 10KG-25MM", "uom": "PCS", "price": 415 }
+      ]
+    }
+  ]
+}
