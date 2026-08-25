@@ -1,4 +1,5 @@
 import { cache } from "react";
+import { unstable_noStore as noStore } from "next/cache";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/admin";
 import { mapDbProductToProduct } from "@/lib/pricing";
@@ -68,6 +69,8 @@ function mapLegacyProduct(row: DbLegacyProduct): Product {
 }
 
 export const getCategories = cache(async (): Promise<DbCategory[]> => {
+  noStore();
+
   if (!isSupabaseConfigured()) return [];
 
   try {
@@ -100,6 +103,8 @@ export const getCategoryBySlug = cache(async (slug: string): Promise<StoreCatego
 });
 
 export const getProducts = cache(async (): Promise<Product[]> => {
+  noStore();
+
   if (!isSupabaseConfigured()) {
     return [];
   }
@@ -119,6 +124,26 @@ export const getProducts = cache(async (): Promise<Product[]> => {
       }
     }
 
+    if (normalized.error) {
+      console.error("[catalog] products query failed:", normalized.error.message);
+    }
+
+    const minimal = await supabase
+      .from("products")
+      .select(MINIMAL_PRODUCT_SELECT)
+      .order("sort_order", { ascending: true });
+
+    if (!minimal.error && minimal.data?.length) {
+      return (minimal.data as unknown as DbProduct[]).map((row) =>
+        mapDbProductToProduct({
+          ...row,
+          has_impa: false,
+          price: 0,
+          product_impa: [],
+        })
+      );
+    }
+
     const legacy = await supabase
       .from("products")
       .select("id, name, category, description, image, sort_order")
@@ -135,6 +160,8 @@ export const getProducts = cache(async (): Promise<Product[]> => {
 });
 
 export const getProductsByCategorySlug = cache(async (slug: string): Promise<Product[]> => {
+  noStore();
+
   const normalizedSlug = slug.trim().toLowerCase();
   const category = await getCategoryBySlug(normalizedSlug);
   if (!category) return [];
@@ -150,6 +177,13 @@ export const getProductsByCategorySlug = cache(async (slug: string): Promise<Pro
 
       if (!normalized.error && normalized.data?.length) {
         return (normalized.data as unknown as DbProduct[]).map(mapDbProductToProduct);
+      }
+
+      if (normalized.error) {
+        console.error(
+          `[catalog] category products query (${normalizedSlug}):`,
+          normalized.error.message
+        );
       }
 
       const minimal = await supabase
@@ -184,6 +218,8 @@ export const getProductsByCategorySlug = cache(async (slug: string): Promise<Pro
 });
 
 export const getProductBySlug = cache(async (slug: string): Promise<Product | null> => {
+  noStore();
+
   const normalizedSlug = slug.trim().toLowerCase();
 
   if (!isSupabaseConfigured()) {
@@ -238,6 +274,25 @@ export const getProductBySlug = cache(async (slug: string): Promise<Product | nu
 
   return null;
 });
+
+export const getRelatedProducts = cache(
+  async (product: Product, limit = 4): Promise<Product[]> => {
+    noStore();
+
+    const categorySlug =
+      product.categorySlug ?? slugify(product.category);
+    if (!categorySlug) return [];
+
+    const categoryProducts = await getProductsByCategorySlug(categorySlug);
+    return categoryProducts
+      .filter(
+        (item) =>
+          item.slug !== product.slug &&
+          (product.id ? item.id !== product.id : item.name !== product.name)
+      )
+      .slice(0, limit);
+  }
+);
 
 export async function getAdminProducts(): Promise<DbProduct[]> {
   if (!isSupabaseConfigured()) return [];

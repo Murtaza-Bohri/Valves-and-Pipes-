@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataPath = join(__dirname, "..", "data", "valve-products.json");
+const descriptionsPath = join(__dirname, "..", "data", "valve-product-descriptions.json");
+const impaSheetPath = join(__dirname, "..", "data", "valve-impa-sheet.json");
 const seed = JSON.parse(readFileSync(dataPath, "utf8"));
+const descriptions = JSON.parse(readFileSync(descriptionsPath, "utf8"));
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/+$/, "");
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -29,6 +32,21 @@ function slugify(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function buildImpaDescription(productName, entry) {
+  const raw = String(entry.description ?? "").trim();
+  if (!raw) return productName;
+
+  if (/HOSE VALVE/i.test(raw)) {
+    return raw.toUpperCase();
+  }
+
+  if (/^\d+\s*MM$/i.test(raw)) {
+    return `${productName} — ${raw.toUpperCase()}`;
+  }
+
+  return raw;
 }
 
 const { data: category, error: categoryError } = await supabase
@@ -56,11 +74,15 @@ if (removePlaceholderError) {
 
 let productsCreated = 0;
 let impaCreated = 0;
+const impaSheet = [];
 
 for (let index = 0; index < seed.products.length; index += 1) {
   const item = seed.products[index];
   const slug = slugify(item.name);
-  const description = `${item.name}. Bronze industrial valve with IMPA-coded sizes and AED pricing.`;
+  const description =
+    item.description ??
+    descriptions[item.name] ??
+    `${item.name}. Bronze industrial valve with IMPA-coded sizes and AED pricing.`;
   const mainImage = item.image ?? seed.defaultImage;
   const sortOrder = index + 1;
 
@@ -100,14 +122,26 @@ for (let index = 0; index < seed.products.length; index += 1) {
 
   await supabase.from("product_impa").delete().eq("product_id", product.id);
 
-  const impaRows = item.impa.map((entry, impaIndex) => ({
-    product_id: product.id,
-    impa_number: entry.number,
-    item_description: entry.description,
-    inventory_uom: entry.uom ?? "PCS",
-    price: entry.price,
-    is_default: impaIndex === 0,
-  }));
+  const impaRows = item.impa.map((entry, impaIndex) => {
+    const itemDescription = buildImpaDescription(item.name, entry);
+
+    impaSheet.push({
+      productName: item.name,
+      impaNumber: entry.number,
+      itemDescription,
+      inventoryUom: entry.uom ?? "PCS",
+      priceAed: entry.price,
+    });
+
+    return {
+      product_id: product.id,
+      impa_number: entry.number,
+      item_description: itemDescription,
+      inventory_uom: entry.uom ?? "PCS",
+      price: entry.price,
+      is_default: impaIndex === 0,
+    };
+  });
 
   const { error: impaError } = await supabase.from("product_impa").insert(impaRows);
 
@@ -122,3 +156,9 @@ for (let index = 0; index < seed.products.length; index += 1) {
 
 console.log("");
 console.log(`Done: ${productsCreated} products, ${impaCreated} IMPA rows in "${category.name}".`);
+
+writeFileSync(
+  impaSheetPath,
+  `${JSON.stringify({ category: category.name, rows: impaSheet }, null, 2)}\n`
+);
+console.log(`IMPA sheet written to ${impaSheetPath}`);

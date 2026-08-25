@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useState, useTransition } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,9 +10,13 @@ import { formatPrice, type Product } from "@/lib/products";
 
 type ProductDetailClientProps = {
   product: Product;
+  categoryLink: ReactNode;
 };
 
-export function ProductDetailClient({ product }: ProductDetailClientProps) {
+export function ProductDetailClient({
+  product,
+  categoryLink,
+}: ProductDetailClientProps) {
   const hasImpa = Boolean(product.hasImpa);
   const impaEntries = product.impaEntries ?? [];
   const defaultImpaId =
@@ -61,9 +66,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
       </div>
 
       <div>
-        <p className="mb-3 text-xs font-semibold tracking-[0.28em] text-[#bd1115] uppercase">
-          {product.category}
-        </p>
+        <div className="mb-3">{categoryLink}</div>
         <h1 className="font-[family-name:var(--font-display)] text-3xl tracking-tight text-[#141414] sm:text-4xl">
           {product.name}
         </h1>
@@ -87,6 +90,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                     <tr>
                       <th className="px-4 py-3">Select</th>
                       <th className="px-4 py-3">IMPA No.</th>
+                      <th className="px-4 py-3">Description</th>
                       <th className="px-4 py-3">UoM</th>
                       <th className="px-4 py-3">Price</th>
                     </tr>
@@ -109,6 +113,9 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                           {entry.impaNumber}
                         </td>
                         <td className="px-4 py-3 text-[#6b6b6b]">
+                          {entry.description}
+                        </td>
+                        <td className="px-4 py-3 text-[#6b6b6b]">
                           {entry.uom}
                         </td>
                         <td className="px-4 py-3 font-semibold text-[#141414]">
@@ -126,6 +133,10 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                 <p>
                   <span className="font-semibold">Selected IMPA:</span>{" "}
                   {selectedImpa.impaNumber}
+                </p>
+                <p>
+                  <span className="font-semibold">Description:</span>{" "}
+                  {selectedImpa.description}
                 </p>
                 <p>
                   <span className="font-semibold">Price:</span>{" "}

@@ -18,8 +18,10 @@ function revalidateCatalog() {
   revalidatePath("/admin/categories");
   revalidatePath("/admin/orders");
   revalidatePath("/admin/customers");
-  revalidatePath("/products");
   revalidatePath("/");
+  revalidatePath("/products");
+  revalidatePath("/categories", "layout");
+  revalidatePath("/products", "layout");
 }
 
 function parseHasImpa(formData: FormData) {
