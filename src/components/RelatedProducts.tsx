@@ -4,42 +4,26 @@ import type { Product } from "@/lib/products";
 
 type RelatedProductsProps = {
   products: Product[];
-  categoryName: string;
-  categorySlug?: string;
 };
 
-export function RelatedProducts({
-  products,
-  categoryName,
-  categorySlug,
-}: RelatedProductsProps) {
+export function RelatedProducts({ products }: RelatedProductsProps) {
   if (products.length === 0) return null;
-
-  const categoryHref = categorySlug ? `/categories/${categorySlug}` : "/products";
 
   return (
     <section
       className="mx-auto mt-16 max-w-6xl border-t border-[#e8e8e8] px-6 pt-12 sm:px-10"
       aria-labelledby="related-products-heading"
     >
-      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="mb-2 text-xs font-semibold tracking-[0.28em] text-[#bd1115] uppercase">
-            Same category
-          </p>
-          <h2
-            id="related-products-heading"
-            className="font-[family-name:var(--font-display)] text-2xl tracking-tight text-[#141414] sm:text-3xl"
-          >
-            More in {categoryName}
-          </h2>
-        </div>
-        <Link
-          href={categoryHref}
-          className="text-sm font-semibold tracking-[0.08em] text-[#bd1115] uppercase hover:underline"
+      <div className="mb-8">
+        <p className="mb-2 text-xs font-semibold tracking-[0.28em] text-[#bd1115] uppercase">
+          You may also like
+        </p>
+        <h2
+          id="related-products-heading"
+          className="font-[family-name:var(--font-display)] text-2xl tracking-tight text-[#141414] sm:text-3xl"
         >
-          View all {categoryName}
-        </Link>
+          Related products
+        </h2>
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">

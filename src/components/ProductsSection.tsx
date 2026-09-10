@@ -48,7 +48,11 @@ export function ProductsSection({
     () =>
       category === ALL_PRODUCTS_CATEGORY
         ? products
-        : products.filter((product) => product.category === category),
+        : products.filter(
+            (product) =>
+              product.rootCategoryName === category ||
+              product.category === category
+          ),
     [category, products]
   );
 
@@ -171,9 +175,6 @@ export function ProductsSection({
                   className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
-                <span className="absolute bottom-2 left-2 rounded bg-[#f7f7f7] px-1.5 py-0.5 text-[9px] font-semibold tracking-[0.12em] text-[#bd1115] uppercase">
-                  {product.category}
-                </span>
               </div>
               <div className="p-3 sm:p-4">
                 <h3 className="mb-1 font-[family-name:var(--font-display)] text-sm tracking-wide text-[#141414] sm:text-base">

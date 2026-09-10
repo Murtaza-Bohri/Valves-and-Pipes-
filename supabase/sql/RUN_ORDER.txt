@@ -17,12 +17,13 @@ Run each file below IN ORDER (wait for success before the next):
  10. supabase/sql/10_row_level_security.sql
  11. supabase/sql/11_optional_impa_pricing.sql
  12. supabase/sql/12_ecommerce_completion.sql
+ 13. supabase/sql/13_category_hierarchy.sql
 
 Each file shows a success message when done.
 
-After step 12:
-  - Restart your Next.js dev server
-  - Open /admin/products to add IMPA entries
+After step 13:
+  - npm run seed:categories
+  - npm run seed:valves (if needed)
 
 Optional: run all at once via
   npm run db:migrate

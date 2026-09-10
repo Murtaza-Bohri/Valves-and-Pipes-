@@ -4,6 +4,9 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { getAdminDisplayName, getAdminEmail } from "@/lib/admin";
 import { validateProductPricing } from "@/lib/pricing";
+import {
+  wouldCreateCategoryCycle,
+} from "@/lib/categories";
 import { slugify } from "@/lib/slug";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -343,6 +346,7 @@ export async function createCategory(
   const description = String(formData.get("description") ?? "").trim();
   const image = String(formData.get("image") ?? "").trim();
   const sortOrder = Number(formData.get("sort_order") ?? 0);
+  const parentId = String(formData.get("parent_id") ?? "").trim() || null;
 
   if (!name) {
     return { error: "Category name is required." };
@@ -351,9 +355,22 @@ export async function createCategory(
   const supabase = await createSupabaseServerClient();
   const slug = slugify(String(formData.get("slug") ?? "") || name);
 
+  if (parentId) {
+    const { data: parent, error: parentError } = await supabase
+      .from("categories")
+      .select("id")
+      .eq("id", parentId)
+      .maybeSingle();
+
+    if (parentError || !parent) {
+      return { error: "Selected parent category was not found." };
+    }
+  }
+
   const { error } = await supabase.from("categories").insert({
     name,
     slug,
+    parent_id: parentId,
     description: description || null,
     image: image || null,
     sort_order: Number.isFinite(sortOrder) ? sortOrder : 0,
@@ -377,6 +394,7 @@ export async function updateCategory(
   const description = String(formData.get("description") ?? "").trim();
   const image = String(formData.get("image") ?? "").trim();
   const sortOrder = Number(formData.get("sort_order") ?? 0);
+  const parentId = String(formData.get("parent_id") ?? "").trim() || null;
 
   if (!id || !name) {
     return { error: "Category name is required." };
@@ -385,11 +403,38 @@ export async function updateCategory(
   const supabase = await createSupabaseServerClient();
   const slug = slugify(String(formData.get("slug") ?? "") || name);
 
+  const { data: allCategories, error: listError } = await supabase
+    .from("categories")
+    .select("id, parent_id");
+
+  if (listError) {
+    return { error: listError.message };
+  }
+
+  if (
+    wouldCreateCategoryCycle(allCategories ?? [], id, parentId)
+  ) {
+    return { error: "Invalid parent category. That would create a circular hierarchy." };
+  }
+
+  if (parentId) {
+    const { data: parent, error: parentError } = await supabase
+      .from("categories")
+      .select("id")
+      .eq("id", parentId)
+      .maybeSingle();
+
+    if (parentError || !parent) {
+      return { error: "Selected parent category was not found." };
+    }
+  }
+
   const { error } = await supabase
     .from("categories")
     .update({
       name,
       slug,
+      parent_id: parentId,
       description: description || null,
       image: image || null,
       sort_order: Number.isFinite(sortOrder) ? sortOrder : 0,
@@ -413,6 +458,25 @@ export async function deleteCategory(
   if (!id) return { error: "Category not found." };
 
   const supabase = await createSupabaseServerClient();
+
+  const { data: allCategories, error: listError } = await supabase
+    .from("categories")
+    .select("id, parent_id");
+
+  if (listError) {
+    return { error: listError.message };
+  }
+
+  const categories = (allCategories ?? []) as Array<{ id: string; parent_id: string | null }>;
+
+  const childCount = categories.filter((category) => category.parent_id === id).length;
+  if (childCount > 0) {
+    return {
+      error:
+        "This category contains child categories. Please move or remove them before deleting.",
+    };
+  }
+
   const { count } = await supabase
     .from("products")
     .select("*", { count: "exact", head: true })
@@ -420,7 +484,8 @@ export async function deleteCategory(
 
   if ((count ?? 0) > 0) {
     return {
-      error: "Remove or reassign products in this category before deleting.",
+      error:
+        "This category contains products. Please move or remove them before deleting.",
     };
   }
 

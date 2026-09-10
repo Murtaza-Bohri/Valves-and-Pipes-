@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { CategoryBreadcrumbs } from "@/components/CategoryBreadcrumbs";
+import { CategorySubcategoryNav } from "@/components/CategorySubcategoryNav";
 import { ProductsSection } from "@/components/ProductsSection";
 import { PageHeader, PageLayout } from "@/components/PageLayout";
 import { createPageMetadata } from "@/lib/seo";
 import {
+  getCategoryBreadcrumbTrail,
   getCategoryBySlug,
+  getChildStoreCategories,
   getProductsByCategorySlug,
-  getStoreCategories,
+  getRootStoreCategories,
 } from "@/lib/products-data";
 
 type CategoryPageProps = {
@@ -44,13 +48,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
-  const [products, categories] = await Promise.all([
+  const [products, childCategories, rootCategories, breadcrumbs] = await Promise.all([
     getProductsByCategorySlug(slug),
-    getStoreCategories(),
+    getChildStoreCategories(category.id),
+    getRootStoreCategories(),
+    getCategoryBreadcrumbTrail(category.id),
   ]);
 
   return (
     <PageLayout className="bg-[#f7f7f7]">
+      <CategoryBreadcrumbs items={breadcrumbs} />
       <PageHeader
         eyebrow="Category"
         title={category.name}
@@ -59,10 +66,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           `Products in our ${category.name.toLowerCase()} range.`
         }
       />
+      <CategorySubcategoryNav categories={childCategories} />
       <div className="mt-10">
         <ProductsSection
           products={products}
-          categories={categories}
+          categories={rootCategories}
           compact
           showFilter={false}
           syncUrl={false}

@@ -12,6 +12,7 @@ export type DbCategory = {
   id: string;
   name: string;
   slug: string;
+  parent_id: string | null;
   description: string | null;
   image: string | null;
   sort_order: number;

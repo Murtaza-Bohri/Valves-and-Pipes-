@@ -8,8 +8,10 @@ export type StoreCategory = {
   id: string;
   name: string;
   slug: string;
+  parentId?: string | null;
   description?: string;
   image?: string | null;
+  children?: StoreCategory[];
 };
 
 export type ProductImpa = {
@@ -28,6 +30,8 @@ export type Product = {
   category: ProductCategory;
   categoryId?: string;
   categorySlug?: string;
+  rootCategoryName?: string;
+  categoryPath?: string[];
   description: string;
   image: string;
   hasImpa?: boolean;
@@ -51,6 +55,7 @@ export type CartLine = {
 const CATEGORY_IMAGE_BY_SLUG: Record<string, string> = {
   pipes: "/products/pipes.png",
   valves: "/products/valves.png",
+  "fittings-flanges": "/products/pipes.png",
 };
 
 export function getCategoryImage(slug: string, image?: string | null) {
@@ -76,6 +81,13 @@ export const fallbackCategories: StoreCategory[] = [
       "Comprehensive valve solutions for upstream and downstream oil & gas operations.",
     image: "/products/valves.png",
   },
+  {
+    id: "fallback-fittings-flanges",
+    name: "Fittings & Flanges",
+    slug: "fittings-flanges",
+    description: "Industrial fittings and flanges for piping systems.",
+    image: "/products/pipes.png",
+  },
 ];
 
 export function setProductCategory(category: ProductCategory) {
@@ -88,6 +100,6 @@ export function formatPrice(amount: number) {
   return `AED ${amount.toFixed(2)}`;
 }
 
-export function buildCategoryFilterList(categories: StoreCategory[]) {
-  return [ALL_PRODUCTS_CATEGORY, ...categories.map((category) => category.name)];
+export function buildCategoryFilterList(rootCategories: StoreCategory[]) {
+  return [ALL_PRODUCTS_CATEGORY, ...rootCategories.map((category) => category.name)];
 }

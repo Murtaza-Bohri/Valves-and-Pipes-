@@ -13,6 +13,7 @@ import {
   ImpaRemovalConfirm,
 } from "@/components/admin/HasImpaSelector";
 import type { DbCategory, DbProduct, DbProductImpa } from "@/types/database";
+import { buildCategoryTree, flattenCategoryTree } from "@/lib/categories";
 
 const initialState: AdminActionState = {};
 
@@ -44,6 +45,7 @@ export function ProductForm({
   };
   const previousHasImpa = product?.has_impa ?? false;
   const switchingOffImpa = previousHasImpa && !hasImpa;
+  const categoryOptions = flattenCategoryTree(buildCategoryTree(categories));
 
   return (
     <form action={action} className="grid gap-4 sm:grid-cols-2">
@@ -69,9 +71,9 @@ export function ProductForm({
           required
           className="w-full border border-[#e0e0e0] bg-white px-3 py-2.5 text-sm outline-none focus:border-[#bd1115]"
         >
-          {categories.map((category) => (
+          {categoryOptions.map(({ category, depth }) => (
             <option key={category.id} value={category.id}>
-              {category.name}
+              {`${"— ".repeat(depth)}${category.name}`}
             </option>
           ))}
         </select>

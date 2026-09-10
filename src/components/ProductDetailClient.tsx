@@ -1,6 +1,5 @@
 "use client";
 
-import type { ReactNode } from "react";
 import { useState, useTransition } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,13 +9,9 @@ import { formatPrice, type Product } from "@/lib/products";
 
 type ProductDetailClientProps = {
   product: Product;
-  categoryLink: ReactNode;
 };
 
-export function ProductDetailClient({
-  product,
-  categoryLink,
-}: ProductDetailClientProps) {
+export function ProductDetailClient({ product }: ProductDetailClientProps) {
   const hasImpa = Boolean(product.hasImpa);
   const impaEntries = product.impaEntries ?? [];
   const defaultImpaId =
@@ -66,7 +61,6 @@ export function ProductDetailClient({
       </div>
 
       <div>
-        <div className="mb-3">{categoryLink}</div>
         <h1 className="font-[family-name:var(--font-display)] text-3xl tracking-tight text-[#141414] sm:text-4xl">
           {product.name}
         </h1>

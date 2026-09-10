@@ -1,0 +1,177 @@
+{
+  "roots": [
+    {
+      "name": "Pipes",
+      "slug": "pipes",
+      "description": "Industrial pipe supplies",
+      "image": "/products/pipes.png",
+      "sortOrder": 1
+    },
+    {
+      "name": "Valves",
+      "slug": "valves",
+      "description": "Industrial valve solutions",
+      "image": "/products/valves.png",
+      "sortOrder": 2,
+      "children": [
+        {
+          "name": "JIS Valves",
+          "slug": "jis-valves",
+          "sortOrder": 1,
+          "children": [
+            {
+              "name": "Globe Valves",
+              "slug": "jis-globe-valves",
+              "sortOrder": 1,
+              "children": [
+                { "name": "Bronze", "slug": "jis-globe-valves-bronze", "sortOrder": 1 },
+                { "name": "Cast Iron", "slug": "jis-globe-valves-cast-iron", "sortOrder": 2 },
+                { "name": "Cast Steel", "slug": "jis-globe-valves-cast-steel", "sortOrder": 3 }
+              ]
+            },
+            {
+              "name": "Gate Valves",
+              "slug": "jis-gate-valves",
+              "sortOrder": 2,
+              "children": [
+                { "name": "Bronze", "slug": "jis-gate-valves-bronze", "sortOrder": 1 },
+                { "name": "Cast Iron", "slug": "jis-gate-valves-cast-iron", "sortOrder": 2 },
+                { "name": "Cast Steel", "slug": "jis-gate-valves-cast-steel", "sortOrder": 3 }
+              ]
+            },
+            {
+              "name": "Angle Valves",
+              "slug": "jis-angle-valves",
+              "sortOrder": 3,
+              "children": [
+                { "name": "Bronze", "slug": "jis-angle-valves-bronze", "sortOrder": 1 },
+                { "name": "Cast Iron", "slug": "jis-angle-valves-cast-iron", "sortOrder": 2 },
+                { "name": "Cast Steel", "slug": "jis-angle-valves-cast-steel", "sortOrder": 3 }
+              ]
+            },
+            { "name": "Storm Valves", "slug": "jis-storm-valves", "sortOrder": 4 },
+            {
+              "name": "Hose Valves",
+              "slug": "jis-hose-valves",
+              "sortOrder": 5,
+              "children": [
+                { "name": "Bronze", "slug": "jis-hose-valves-bronze", "sortOrder": 1 },
+                { "name": "Cast Iron", "slug": "jis-hose-valves-cast-iron", "sortOrder": 2 }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DIN Valves",
+          "slug": "din-valves",
+          "sortOrder": 2,
+          "children": [
+            {
+              "name": "Globe Valves",
+              "slug": "din-globe-valves",
+              "sortOrder": 1,
+              "children": [
+                { "name": "Bronze", "slug": "din-globe-valves-bronze", "sortOrder": 1 },
+                { "name": "Cast Iron", "slug": "din-globe-valves-cast-iron", "sortOrder": 2 },
+                { "name": "Cast Steel", "slug": "din-globe-valves-cast-steel", "sortOrder": 3 }
+              ]
+            },
+            {
+              "name": "Gate Valves",
+              "slug": "din-gate-valves",
+              "sortOrder": 2,
+              "children": [
+                { "name": "Bronze", "slug": "din-gate-valves-bronze", "sortOrder": 1 },
+                { "name": "Cast Iron", "slug": "din-gate-valves-cast-iron", "sortOrder": 2 },
+                { "name": "Cast Steel", "slug": "din-gate-valves-cast-steel", "sortOrder": 3 }
+              ]
+            },
+            {
+              "name": "Angle Valves",
+              "slug": "din-angle-valves",
+              "sortOrder": 3,
+              "children": [
+                { "name": "Bronze", "slug": "din-angle-valves-bronze", "sortOrder": 1 },
+                { "name": "Cast Iron", "slug": "din-angle-valves-cast-iron", "sortOrder": 2 },
+                { "name": "Cast Steel", "slug": "din-angle-valves-cast-steel", "sortOrder": 3 }
+              ]
+            },
+            { "name": "Storm Valves", "slug": "din-storm-valves", "sortOrder": 4 },
+            { "name": "Hose Valves", "slug": "din-hose-valves", "sortOrder": 5 }
+          ]
+        },
+        {
+          "name": "Butterfly Valves",
+          "slug": "butterfly-valves",
+          "sortOrder": 3,
+          "children": [
+            {
+              "name": "Wafer Type",
+              "slug": "butterfly-wafer-type",
+              "sortOrder": 1,
+              "children": [
+                {
+                  "name": "Body: DI, Disc: SS 304, Seat: NBR",
+                  "slug": "butterfly-wafer-di-ss304-nbr",
+                  "sortOrder": 1
+                },
+                {
+                  "name": "Body: DI, Disc: SS 304, Seat: EPDM",
+                  "slug": "butterfly-wafer-di-ss304-epdm",
+                  "sortOrder": 2
+                },
+                {
+                  "name": "Body: DI, Disc: AL+Bronze, Seat: EPDM",
+                  "slug": "butterfly-wafer-di-al-bronze-epdm",
+                  "sortOrder": 3
+                },
+                {
+                  "name": "Body: SS, Disc: SS 304, Seat: Teflon/PTFE",
+                  "slug": "butterfly-wafer-ss-ss304-ptfe",
+                  "sortOrder": 4
+                }
+              ]
+            },
+            { "name": "Lug Type PN6", "slug": "butterfly-lug-type-pn6", "sortOrder": 2 },
+            { "name": "Lug Type PN10", "slug": "butterfly-lug-type-pn10", "sortOrder": 3 },
+            { "name": "Lug Type PN16", "slug": "butterfly-lug-type-pn16", "sortOrder": 4 },
+            { "name": "Lug Type 5K", "slug": "butterfly-lug-type-5k", "sortOrder": 5 },
+            { "name": "Lug Type 10K", "slug": "butterfly-lug-type-10k", "sortOrder": 6 },
+            { "name": "Semi Lug Type", "slug": "butterfly-semi-lug-type", "sortOrder": 7 },
+            {
+              "name": "Double Flange - Long Body",
+              "slug": "butterfly-double-flange-long-body",
+              "sortOrder": 8
+            },
+            {
+              "name": "Double Flange - Short Body",
+              "slug": "butterfly-double-flange-short-body",
+              "sortOrder": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fittings & Flanges",
+      "slug": "fittings-flanges",
+      "description": "Industrial fittings and flanges for piping systems.",
+      "image": "/products/pipes.png",
+      "sortOrder": 3
+    }
+  ],
+  "productCategoryBySlug": {
+    "globe-valve-bronze-flanged-end-f7301-5kg": "jis-globe-valves-bronze",
+    "globe-valve-bronze-flanged-end-f7303-16kg": "jis-globe-valves-bronze",
+    "globe-valve-bronze-flanged-end-union-bonnet-f7346-5kg": "jis-globe-valves-bronze",
+    "globe-valve-bronze-flanged-end-union-bonnet-f7348-16kg": "jis-globe-valves-bronze",
+    "angle-valve-bronze-flanged-end-f7304-16kg": "jis-angle-valves-bronze",
+    "gate-valve-bronze-flanged-end-rising-stem-f7367-5kg": "jis-gate-valves-bronze",
+    "gate-valve-bronze-flanged-end-rising-stem-f7368-10kg": "jis-gate-valves-bronze",
+    "globe-valve-screw-down-check-bronze-flanged-f7351-5kg": "jis-storm-valves",
+    "angle-valve-screw-down-check-bronze-flanged-f7352-5kg": "jis-storm-valves",
+    "globe-valve-screw-down-check-bronze-flanged-f7409-16kg": "jis-storm-valves",
+    "angle-valve-screw-down-check-bronze-flanged-f7410-16kg": "jis-storm-valves",
+    "hose-valves-bronze-flange-screw-f7334": "jis-hose-valves-bronze"
+  }
+}

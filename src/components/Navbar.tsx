@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { CartLink } from "@/components/CartLink";
+import { NavbarCategoryMenu } from "@/components/NavbarCategoryMenu";
 import type { StoreCategory } from "@/lib/products";
 
 const navLinks = [
@@ -57,7 +58,7 @@ export function Navbar({ categories = [] }: NavbarProps) {
         solid
           ? "border-b border-black/5 bg-white/95 shadow-sm backdrop-blur-md"
           : "bg-transparent"
-      }`}
+      } overflow-visible`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:h-[72px] sm:px-8">
         <Link href="/" className="relative z-10">
@@ -110,9 +111,9 @@ export function Navbar({ categories = [] }: NavbarProps) {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -6 }}
                   transition={{ duration: 0.18 }}
-                  className="absolute left-0 top-full pt-3"
+                  className="absolute left-0 top-full z-50 overflow-visible pt-3"
                 >
-                  <div className="min-w-[220px] border border-[#e8e8e8] bg-white py-2 shadow-lg">
+                  <div className="min-w-[240px] max-w-[min(100vw-2rem,320px)] overflow-visible border border-[#e8e8e8] bg-white py-2 shadow-xl">
                     <Link
                       href="/products"
                       onClick={() => setProductsOpen(false)}
@@ -120,16 +121,10 @@ export function Navbar({ categories = [] }: NavbarProps) {
                     >
                       All Products
                     </Link>
-                    {categories.map((category) => (
-                      <Link
-                        key={category.id}
-                        href={`/categories/${category.slug}`}
-                        onClick={() => setProductsOpen(false)}
-                        className="block px-4 py-2.5 text-sm text-[#141414] transition-colors hover:bg-[#f7f7f7] hover:text-[#bd1115]"
-                      >
-                        {category.name}
-                      </Link>
-                    ))}
+                    <NavbarCategoryMenu
+                      categories={categories}
+                      onNavigate={() => setProductsOpen(false)}
+                    />
                   </div>
                 </motion.div>
               )}
