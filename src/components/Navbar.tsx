@@ -8,6 +8,7 @@ import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { CartLink } from "@/components/CartLink";
 import { NavbarCategoryMenu } from "@/components/NavbarCategoryMenu";
+import { NavbarSearch } from "@/components/NavbarSearch";
 import type { StoreCategory } from "@/lib/products";
 
 const navLinks = [
@@ -142,7 +143,8 @@ export function Navbar({ categories = [] }: NavbarProps) {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
+          <NavbarSearch solid={solid} />
           <CartLink className={linkClass} />
           <Link
             href="/contact"
