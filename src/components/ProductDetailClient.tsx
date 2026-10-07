@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import Image from "next/image";
+import { ProductDatasheetModal } from "@/components/ProductDatasheetModal";
+import { ProductImage } from "@/components/ProductImage";
 import Link from "next/link";
+import { FileText } from "lucide-react";
 import { validateCartLine } from "@/app/cart/actions";
 import { upsertCartLine } from "@/lib/cart";
 import { formatPrice, type Product } from "@/lib/products";
@@ -20,7 +22,10 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
   const [selectedImpaId, setSelectedImpaId] = useState(defaultImpaId);
   const [quantity, setQuantity] = useState(1);
   const [message, setMessage] = useState<string | null>(null);
+  const [datasheetOpen, setDatasheetOpen] = useState(false);
   const [pending, startTransition] = useTransition();
+
+  const datasheetFileUrl = product.datasheetUrl?.trim() || null;
 
   const selectedImpa = impaEntries.find((entry) => entry.id === selectedImpaId);
   const activePrice = hasImpa ? selectedImpa?.price : product.price;
@@ -48,9 +53,10 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
   };
 
   return (
+    <>
     <div className="mx-auto grid max-w-6xl gap-10 px-6 sm:px-10 lg:grid-cols-2">
       <div className="relative aspect-square overflow-hidden border border-[#e8e8e8] bg-white">
-        <Image
+        <ProductImage
           src={product.image}
           alt={product.name}
           fill
@@ -187,6 +193,16 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
           >
             {pending ? "Adding..." : "Add to cart"}
           </button>
+          {datasheetFileUrl ? (
+            <button
+              type="button"
+              onClick={() => setDatasheetOpen(true)}
+              className="inline-flex items-center gap-2 border border-[#141414] px-6 py-3 text-xs font-semibold tracking-[0.14em] text-[#141414] uppercase hover:border-[#bd1115] hover:text-[#bd1115]"
+            >
+              <FileText className="size-4" aria-hidden />
+              Data sheet
+            </button>
+          ) : null}
           <Link
             href="/cart"
             className="border border-[#141414] px-6 py-3 text-xs font-semibold tracking-[0.14em] text-[#141414] uppercase hover:border-[#bd1115] hover:text-[#bd1115]"
@@ -195,6 +211,17 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
           </Link>
         </div>
       </div>
+
     </div>
+
+    {datasheetFileUrl ? (
+      <ProductDatasheetModal
+        open={datasheetOpen}
+        title={`${product.name} — data sheet`}
+        fileUrl={datasheetFileUrl}
+        onClose={() => setDatasheetOpen(false)}
+      />
+    ) : null}
+    </>
   );
 }

@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { ProductImage } from "@/components/ProductImage";
 import { useRouter } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
@@ -71,23 +71,37 @@ export function ProductsSection({
   }, []);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from("[data-product]", {
-        y: 32,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.06,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 78%",
-          toggleActions: "play none none none",
-        },
-      });
-    }, sectionRef);
+    if (filtered.length === 0) return;
 
-    return () => ctx.revert();
-  }, []);
+    let ctx: ReturnType<typeof gsap.context> | undefined;
+
+    const frame = requestAnimationFrame(() => {
+      if (!sectionRef.current) return;
+
+      const targets = sectionRef.current.querySelectorAll("[data-product]");
+      if (!targets.length) return;
+
+      ctx = gsap.context(() => {
+        gsap.from(targets, {
+          y: 32,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.06,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 78%",
+            toggleActions: "play none none none",
+          },
+        });
+      }, sectionRef);
+    });
+
+    return () => {
+      cancelAnimationFrame(frame);
+      ctx?.revert();
+    };
+  }, [filtered.length, products.length, category]);
 
   const selectCategory = (next: ProductCategory) => {
     setCategory(next);
@@ -167,7 +181,7 @@ export function ProductsSection({
               className="group overflow-hidden border border-[#e8e8e8] bg-white transition-shadow hover:shadow-md"
             >
               <div className="relative aspect-square overflow-hidden bg-white">
-                <Image
+                <ProductImage
                   src={product.image}
                   alt={`${product.name} supplied by Himmat Oil Fields`}
                   fill

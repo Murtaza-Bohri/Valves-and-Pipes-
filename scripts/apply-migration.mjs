@@ -12,6 +12,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import pg from "pg";
+import "./lib/load-env.mjs";
 
 const dbUrl = process.env.SUPABASE_DB_URL;
 const migrationPath = path.join(

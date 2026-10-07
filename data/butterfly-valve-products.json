@@ -1,0 +1,1056 @@
+{
+  "sourceFile": "C:\\Users\\hussain\\Desktop\\himmat-oil-fields\\data\\Product List - Butterfly Valves.xlsx",
+  "defaultImage": "/products/valves.png",
+  "products": [
+    {
+      "name": "Butterfly Valve Wafer Type W/Lock Lever",
+      "categorySlug": "butterfly-wafer-di-ss304-nbr",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR",
+      "image": "https://drive.google.com/uc?export=view&id=1sME6_2pYB_JS4BtcV9QDB3-b7w3AHw7f",
+      "datasheetUrl": "https://drive.google.com/file/d/1rM8GClmmYu9shOAd8R1DpbkUPSmY-OI9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "752201",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/LOCK LEVER 2\"",
+          "uom": "PCS",
+          "price": 80
+        },
+        {
+          "number": "752202",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/LOCK LEVER 2-1/2\"",
+          "uom": "PCS",
+          "price": 90
+        },
+        {
+          "number": "752203",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/LOCK LEVER 3\"",
+          "uom": "PCS",
+          "price": 110
+        },
+        {
+          "number": "752204",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/LOCK LEVER 4\"",
+          "uom": "PCS",
+          "price": 140
+        },
+        {
+          "number": "752205",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/LOCK LEVER 5\"",
+          "uom": "PCS",
+          "price": 180
+        },
+        {
+          "number": "752206",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/LOCK LEVER 6\"",
+          "uom": "PCS",
+          "price": 220
+        },
+        {
+          "number": "752207",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/LOCK LEVER 8\"",
+          "uom": "PCS",
+          "price": 550
+        },
+        {
+          "number": "752208",
+          "description": "BUTTERFLY VALVE WAFER TYPE ; W/LOCK LEVER 1-1/2\"",
+          "uom": "PCS",
+          "price": 70
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Wafer Type W/Worm Gear",
+      "categorySlug": "butterfly-wafer-di-ss304-nbr",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR",
+      "image": "https://drive.google.com/uc?export=view&id=1QRlNJaBlmHLNack6SMWZ9oDqegxSY3Vd",
+      "datasheetUrl": "https://drive.google.com/file/d/1qchm9ispeyT6AgejlEeRUtleMAlp8_aK/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "752211",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 2\"",
+          "uom": "PCS",
+          "price": 140
+        },
+        {
+          "number": "752212",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 2-1/2\"",
+          "uom": "PCS",
+          "price": 150
+        },
+        {
+          "number": "752213",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 3\"",
+          "uom": "PCS",
+          "price": 170
+        },
+        {
+          "number": "752214",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 4\"",
+          "uom": "PCS",
+          "price": 190
+        },
+        {
+          "number": "752215",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 5\"",
+          "uom": "PCS",
+          "price": 220
+        },
+        {
+          "number": "752216",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 6\"",
+          "uom": "PCS",
+          "price": 250
+        },
+        {
+          "number": "752217",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 8\"",
+          "uom": "PCS",
+          "price": 650
+        },
+        {
+          "number": "752218",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 10\"",
+          "uom": "PCS",
+          "price": 1100
+        },
+        {
+          "number": "752219",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 12\"",
+          "uom": "PCS",
+          "price": 1400
+        },
+        {
+          "number": "752220",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 14\"",
+          "uom": "PCS",
+          "price": 1800
+        },
+        {
+          "number": "752221",
+          "description": "BUTTERFLY VALVE WAFER TYPE W/WORM GEAR 16\"",
+          "uom": "PCS",
+          "price": 2400
+        },
+        {
+          "number": "752227",
+          "description": "BUTTERFLY VALVE WAFER TYPE, W/WORM GEAR 1-1/2\"",
+          "uom": "PCS",
+          "price": 120
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Wafer Type, Central Handle Actuator",
+      "categorySlug": "butterfly-wafer-di-ss304-nbr",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR",
+      "image": "https://drive.google.com/uc?export=view&id=1QcVD3eZ-RgXObzmHAV9Ei8Fb8E8JmysM",
+      "datasheetUrl": null,
+      "impa": [
+        {
+          "number": "752235",
+          "description": "BUTTERFLY VALVE WAFER TYPE, CENTRAL HANDLE ACTUATOR 4\"",
+          "uom": "PCS",
+          "price": 650
+        },
+        {
+          "number": "752236",
+          "description": "BUTTERFLY VALVE WAFER TYPE, CENTRAL HANDLE ACTUATOR 5\"",
+          "uom": "PCS",
+          "price": 800
+        },
+        {
+          "number": "752237",
+          "description": "BUTTERFLY VALVE WAFER TYPE, CENTRAL HANDLE ACTUATOR 6\"",
+          "uom": "PCS",
+          "price": 1050
+        },
+        {
+          "number": "752238",
+          "description": "BUTTERFLY VALVE WAFER TYPE, CENTRAL HANDLE ACTUATOR 8\"",
+          "uom": "PCS",
+          "price": 1450
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Wafer Type Series 50",
+      "categorySlug": "butterfly-wafer-di-ss304-nbr",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1sME6_2pYB_JS4BtcV9QDB3-b7w3AHw7f",
+      "datasheetUrl": "https://drive.google.com/file/d/1rM8GClmmYu9shOAd8R1DpbkUPSmY-OI9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754401",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 50MM",
+          "uom": "PCS",
+          "price": 80
+        },
+        {
+          "number": "754402",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 65MM",
+          "uom": "PCS",
+          "price": 90
+        },
+        {
+          "number": "754403",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 80MM",
+          "uom": "PCS",
+          "price": 110
+        },
+        {
+          "number": "754404",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 100MM",
+          "uom": "PCS",
+          "price": 140
+        },
+        {
+          "number": "754405",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 125MM",
+          "uom": "PCS",
+          "price": 180
+        },
+        {
+          "number": "754406",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 150MM",
+          "uom": "PCS",
+          "price": 220
+        },
+        {
+          "number": "754407",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 200MM",
+          "uom": "PCS",
+          "price": 650
+        },
+        {
+          "number": "754408",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 250MM",
+          "uom": "PCS",
+          "price": 1100
+        },
+        {
+          "number": "754409",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 300MM",
+          "uom": "PCS",
+          "price": 1400
+        },
+        {
+          "number": "754410",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 350MM",
+          "uom": "PCS",
+          "price": 1800
+        },
+        {
+          "number": "754411",
+          "description": "VALVE BUTTERFLY CAST IRON DIN WAFER TYPE SERIES 50 400MM",
+          "uom": "PCS",
+          "price": 2400
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Lug Type Series 52 Pn6",
+      "categorySlug": "butterfly-lug-type-pn6",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Jxg1DVUCp0T1ZW30NGczDE1GXYvcsXHl",
+      "datasheetUrl": "https://drive.google.com/file/d/12xQ8nSYyaGg9zM0peMNawrnyJ6inVotm/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754416",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN6 50MM",
+          "uom": "PCS",
+          "price": 120
+        },
+        {
+          "number": "754417",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN6 65MM",
+          "uom": "PCS",
+          "price": 140
+        },
+        {
+          "number": "754418",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN6 80MM",
+          "uom": "PCS",
+          "price": 190
+        },
+        {
+          "number": "754419",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN6 100MM",
+          "uom": "PCS",
+          "price": 250
+        },
+        {
+          "number": "754420",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN6 125MM",
+          "uom": "PCS",
+          "price": 300
+        },
+        {
+          "number": "754421",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN6 150MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754422",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN6 200MM",
+          "uom": "PCS",
+          "price": 950
+        },
+        {
+          "number": "754423",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN6 250MM",
+          "uom": "PCS",
+          "price": 1300
+        },
+        {
+          "number": "754424",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN6 300MM",
+          "uom": "PCS",
+          "price": 1800
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Lug Type Series 52 Pn10",
+      "categorySlug": "butterfly-lug-type-pn10",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Jxg1DVUCp0T1ZW30NGczDE1GXYvcsXHl",
+      "datasheetUrl": "https://drive.google.com/file/d/1GBRVwW9h3xKr6mrXawNu0oKvEfw6Ds6X/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754431",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN10 50MM",
+          "uom": "PCS",
+          "price": 120
+        },
+        {
+          "number": "754432",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN10 65MM",
+          "uom": "PCS",
+          "price": 140
+        },
+        {
+          "number": "754433",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN10 80MM",
+          "uom": "PCS",
+          "price": 190
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Lug Type #52 Pn10",
+      "categorySlug": "butterfly-lug-type-pn10",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Jxg1DVUCp0T1ZW30NGczDE1GXYvcsXHl",
+      "datasheetUrl": "https://drive.google.com/file/d/1GBRVwW9h3xKr6mrXawNu0oKvEfw6Ds6X/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754434",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN10 100MM",
+          "uom": "PCS",
+          "price": 250
+        },
+        {
+          "number": "754435",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN10 125MM",
+          "uom": "PCS",
+          "price": 300
+        },
+        {
+          "number": "754436",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN10 150MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754437",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN10 200MM",
+          "uom": "PCS",
+          "price": 950
+        },
+        {
+          "number": "754438",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN10 250MM",
+          "uom": "PCS",
+          "price": 1300
+        },
+        {
+          "number": "754439",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN10 300MM",
+          "uom": "PCS",
+          "price": 1800
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Lug Type Series 52 Pn16",
+      "categorySlug": "butterfly-lug-type-pn16",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Jxg1DVUCp0T1ZW30NGczDE1GXYvcsXHl",
+      "datasheetUrl": "https://drive.google.com/file/d/1GBRVwW9h3xKr6mrXawNu0oKvEfw6Ds6X/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754446",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN16 50MM",
+          "uom": "PCS",
+          "price": 120
+        },
+        {
+          "number": "754447",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN16 65MM",
+          "uom": "PCS",
+          "price": 140
+        },
+        {
+          "number": "754448",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE SERIES 52 PN16 80MM",
+          "uom": "PCS",
+          "price": 190
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Lug Type #52 Pn16",
+      "categorySlug": "butterfly-lug-type-pn16",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Jxg1DVUCp0T1ZW30NGczDE1GXYvcsXHl",
+      "datasheetUrl": "https://drive.google.com/file/d/1GBRVwW9h3xKr6mrXawNu0oKvEfw6Ds6X/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754449",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN16 100MM",
+          "uom": "PCS",
+          "price": 250
+        },
+        {
+          "number": "754450",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN16 125MM",
+          "uom": "PCS",
+          "price": 300
+        },
+        {
+          "number": "754451",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN16 150MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754452",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN16 200MM",
+          "uom": "PCS",
+          "price": 1100
+        },
+        {
+          "number": "754453",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN16 250MM",
+          "uom": "PCS",
+          "price": 1500
+        },
+        {
+          "number": "754454",
+          "description": "VALVE BUTTERFLY CAST IRON DIN LUG TYPE #52 PN16 300MM",
+          "uom": "PCS",
+          "price": 1900
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Flanged Type #55 Pn6",
+      "categorySlug": "butterfly-valves",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1r7T9C9T79EuLykUMyHTDsf49ony1S7Vx",
+      "datasheetUrl": "https://drive.google.com/file/d/1f6333i3qdRyFPEQjivweDCREOH0N6VQn/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754461",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN6 50MM",
+          "uom": "PCS",
+          "price": 225
+        },
+        {
+          "number": "754462",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN6 65MM",
+          "uom": "PCS",
+          "price": 290
+        },
+        {
+          "number": "754463",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN6 80MM",
+          "uom": "PCS",
+          "price": 325
+        },
+        {
+          "number": "754464",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN6 100MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754465",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN6 125MM",
+          "uom": "PCS",
+          "price": 550
+        },
+        {
+          "number": "754466",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN6 150MM",
+          "uom": "PCS",
+          "price": 700
+        },
+        {
+          "number": "754467",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN6 200MM",
+          "uom": "PCS",
+          "price": 1300
+        },
+        {
+          "number": "754468",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN6 250MM",
+          "uom": "PCS",
+          "price": 1795
+        },
+        {
+          "number": "754469",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN6 300MM",
+          "uom": "PCS",
+          "price": 2400
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Flanged Type #55 Pn10",
+      "categorySlug": "butterfly-valves",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1r7T9C9T79EuLykUMyHTDsf49ony1S7Vx",
+      "datasheetUrl": "https://drive.google.com/file/d/1f6333i3qdRyFPEQjivweDCREOH0N6VQn/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754476",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN10 50MM",
+          "uom": "PCS",
+          "price": 225
+        },
+        {
+          "number": "754477",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN10 65MM",
+          "uom": "PCS",
+          "price": 290
+        },
+        {
+          "number": "754478",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN10 80MM",
+          "uom": "PCS",
+          "price": 325
+        },
+        {
+          "number": "754479",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN10 100MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754480",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN10 125MM",
+          "uom": "PCS",
+          "price": 550
+        },
+        {
+          "number": "754481",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN10 150MM",
+          "uom": "PCS",
+          "price": 700
+        },
+        {
+          "number": "754482",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN10 200MM",
+          "uom": "PCS",
+          "price": 1300
+        },
+        {
+          "number": "754483",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN10 250MM",
+          "uom": "PCS",
+          "price": 1795
+        },
+        {
+          "number": "754484",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN10 300MM",
+          "uom": "PCS",
+          "price": 2400
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Flanged Type #55 Pn16",
+      "categorySlug": "butterfly-valves",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1r7T9C9T79EuLykUMyHTDsf49ony1S7Vx",
+      "datasheetUrl": "https://drive.google.com/file/d/1f6333i3qdRyFPEQjivweDCREOH0N6VQn/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754501",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN16 50MM",
+          "uom": "PCS",
+          "price": 225
+        },
+        {
+          "number": "754502",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN16 65MM",
+          "uom": "PCS",
+          "price": 290
+        },
+        {
+          "number": "754503",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN16 80MM",
+          "uom": "PCS",
+          "price": 325
+        },
+        {
+          "number": "754504",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN16 100MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754505",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN16 125MM",
+          "uom": "PCS",
+          "price": 550
+        },
+        {
+          "number": "754506",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN16 150MM",
+          "uom": "PCS",
+          "price": 700
+        },
+        {
+          "number": "754507",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN16 200MM",
+          "uom": "PCS",
+          "price": 1300
+        },
+        {
+          "number": "754508",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN16 250MM",
+          "uom": "PCS",
+          "price": 1795
+        },
+        {
+          "number": "754509",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED TYPE #55 PN16 300MM",
+          "uom": "PCS",
+          "price": 2400
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Flanged Short #53 Pn6",
+      "categorySlug": "butterfly-valves",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1CqUJTKFcppPCvxT-YEyWxFhK5ktMgpq-",
+      "datasheetUrl": "https://drive.google.com/file/d/1xuDZzVbkKNS9X5zuzPZX0rmBm-mCOp-5/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754566",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN6 50MM",
+          "uom": "PCS",
+          "price": 225
+        },
+        {
+          "number": "754567",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN6 65MM",
+          "uom": "PCS",
+          "price": 290
+        },
+        {
+          "number": "754568",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN6 80MM",
+          "uom": "PCS",
+          "price": 325
+        },
+        {
+          "number": "754569",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN6 100MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754570",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN6 125MM",
+          "uom": "PCS",
+          "price": 550
+        },
+        {
+          "number": "754571",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN6 150MM",
+          "uom": "PCS",
+          "price": 700
+        },
+        {
+          "number": "754572",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN6 200MM",
+          "uom": "PCS",
+          "price": 1300
+        },
+        {
+          "number": "754573",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN6 250MM",
+          "uom": "PCS",
+          "price": 1795
+        },
+        {
+          "number": "754574",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN6 300MM",
+          "uom": "PCS",
+          "price": 2400
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Flanged Short #53 Pn10",
+      "categorySlug": "butterfly-valves",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1CqUJTKFcppPCvxT-YEyWxFhK5ktMgpq-",
+      "datasheetUrl": "https://drive.google.com/file/d/1xuDZzVbkKNS9X5zuzPZX0rmBm-mCOp-5/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754581",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN10 50MM",
+          "uom": "PCS",
+          "price": 225
+        },
+        {
+          "number": "754582",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN10 65MM",
+          "uom": "PCS",
+          "price": 290
+        },
+        {
+          "number": "754583",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN10 80MM",
+          "uom": "PCS",
+          "price": 325
+        },
+        {
+          "number": "754584",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN10 100MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754585",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN10 125MM",
+          "uom": "PCS",
+          "price": 550
+        },
+        {
+          "number": "754586",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN10 150MM",
+          "uom": "PCS",
+          "price": 700
+        },
+        {
+          "number": "754587",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN10 200MM",
+          "uom": "PCS",
+          "price": 1300
+        },
+        {
+          "number": "754588",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN10 250MM",
+          "uom": "PCS",
+          "price": 1795
+        },
+        {
+          "number": "754589",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN10 300MM",
+          "uom": "PCS",
+          "price": 2400
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Flanged Short #53 Pn16",
+      "categorySlug": "butterfly-valves",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1CqUJTKFcppPCvxT-YEyWxFhK5ktMgpq-",
+      "datasheetUrl": "https://drive.google.com/file/d/1xuDZzVbkKNS9X5zuzPZX0rmBm-mCOp-5/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754601",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN16 50MM",
+          "uom": "PCS",
+          "price": 225
+        },
+        {
+          "number": "754602",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN16 65MM",
+          "uom": "PCS",
+          "price": 290
+        },
+        {
+          "number": "754603",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN16 80MM",
+          "uom": "PCS",
+          "price": 325
+        },
+        {
+          "number": "754604",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN16 100MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754605",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN16 125MM",
+          "uom": "PCS",
+          "price": 550
+        },
+        {
+          "number": "754606",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN16 150MM",
+          "uom": "PCS",
+          "price": 700
+        },
+        {
+          "number": "754607",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN16 200MM",
+          "uom": "PCS",
+          "price": 1300
+        },
+        {
+          "number": "754608",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN16 250MM",
+          "uom": "PCS",
+          "price": 1795
+        },
+        {
+          "number": "754609",
+          "description": "VALVE BUTTERFLY CAST IRON DIN FLANGED SHORT #53 PN16 300MM",
+          "uom": "PCS",
+          "price": 2400
+        }
+      ]
+    },
+    {
+      "name": "Valve Butterfly Cast Iron Din Teflon Lined #58",
+      "categorySlug": "butterfly-valves",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : Teflon , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1tcuMSyA6QT_3Ywc_LKfJSK6HWKJLw2tr",
+      "datasheetUrl": null,
+      "impa": [
+        {
+          "number": "754671",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 50MM",
+          "uom": "PCS",
+          "price": 200
+        },
+        {
+          "number": "754672",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 65MM",
+          "uom": "PCS",
+          "price": 250
+        },
+        {
+          "number": "754673",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 80MM",
+          "uom": "PCS",
+          "price": 300
+        },
+        {
+          "number": "754674",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 100MM",
+          "uom": "PCS",
+          "price": 350
+        },
+        {
+          "number": "754675",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 125MM",
+          "uom": "PCS",
+          "price": 425
+        },
+        {
+          "number": "754676",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 150MM",
+          "uom": "PCS",
+          "price": 550
+        },
+        {
+          "number": "754677",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 200MM",
+          "uom": "PCS",
+          "price": 1200
+        },
+        {
+          "number": "754678",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 250MM",
+          "uom": "PCS",
+          "price": 1400
+        },
+        {
+          "number": "754679",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 300MM",
+          "uom": "PCS",
+          "price": 2100
+        },
+        {
+          "number": "754680",
+          "description": "VALVE BUTTERFLY CAST IRON DIN TEFLON LINED #58 350MM",
+          "uom": "PCS",
+          "price": 2500
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Lug Type",
+      "categorySlug": "butterfly-lug-type-5k",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Jxg1DVUCp0T1ZW30NGczDE1GXYvcsXHl",
+      "datasheetUrl": "https://drive.google.com/file/d/1XDx26pLLanCYq80-6QpUNt2qD4D0imVh/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS LUG TYPE   50MM -  5K",
+          "uom": "PCS",
+          "price": 120
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Semi Lug Type   50mm -  Undrilled",
+      "categorySlug": "butterfly-semi-lug-type",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Nn4xK7NG20b2_3oYkVhVKBvF2-wudSE6",
+      "datasheetUrl": "https://drive.google.com/file/d/1Xe9Q3chE2S1P1gAghDot38EXb9bLsj-9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS SEMI LUG TYPE   50MM -  UNDRILLED",
+          "uom": "PCS",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Semi Lug Type   65mm -  Undrilled",
+      "categorySlug": "butterfly-semi-lug-type",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Nn4xK7NG20b2_3oYkVhVKBvF2-wudSE6",
+      "datasheetUrl": "https://drive.google.com/file/d/1Xe9Q3chE2S1P1gAghDot38EXb9bLsj-9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS SEMI LUG TYPE   65MM -  UNDRILLED",
+          "uom": "PCS",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Semi Lug Type   80mm -  Undrilled",
+      "categorySlug": "butterfly-semi-lug-type",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Nn4xK7NG20b2_3oYkVhVKBvF2-wudSE6",
+      "datasheetUrl": "https://drive.google.com/file/d/1Xe9Q3chE2S1P1gAghDot38EXb9bLsj-9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS SEMI LUG TYPE   80MM -  UNDRILLED",
+          "uom": "PCS",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Semi Lug Type   100mm -  Undrilled",
+      "categorySlug": "butterfly-semi-lug-type",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Nn4xK7NG20b2_3oYkVhVKBvF2-wudSE6",
+      "datasheetUrl": "https://drive.google.com/file/d/1Xe9Q3chE2S1P1gAghDot38EXb9bLsj-9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS SEMI LUG TYPE   100MM -  UNDRILLED",
+          "uom": "PCS",
+          "price": 350
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Semi Lug Type   125mm -  Undrilled",
+      "categorySlug": "butterfly-semi-lug-type",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Nn4xK7NG20b2_3oYkVhVKBvF2-wudSE6",
+      "datasheetUrl": "https://drive.google.com/file/d/1Xe9Q3chE2S1P1gAghDot38EXb9bLsj-9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS SEMI LUG TYPE   125MM -  UNDRILLED",
+          "uom": "PCS",
+          "price": 450
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Semi Lug Type   150mm -  Undrilled",
+      "categorySlug": "butterfly-semi-lug-type",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Lever Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1Nn4xK7NG20b2_3oYkVhVKBvF2-wudSE6",
+      "datasheetUrl": "https://drive.google.com/file/d/1Xe9Q3chE2S1P1gAghDot38EXb9bLsj-9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS SEMI LUG TYPE   150MM -  UNDRILLED",
+          "uom": "PCS",
+          "price": 575
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Semi Lug Type   200mm -  Undrilled",
+      "categorySlug": "butterfly-semi-lug-type",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Gear Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1FswpEPOKOZdD_1pthhGfdOHxdJK5qllQ",
+      "datasheetUrl": "https://drive.google.com/file/d/15DNgFq5V4Bgjde9eCPQF-5FEWxsZE34p/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS SEMI LUG TYPE   200MM -  UNDRILLED",
+          "uom": "PCS",
+          "price": 1050
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Semi Lug Type   250mm -  Undrilled",
+      "categorySlug": "butterfly-semi-lug-type",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Gear Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1FswpEPOKOZdD_1pthhGfdOHxdJK5qllQ",
+      "datasheetUrl": "https://drive.google.com/file/d/15DNgFq5V4Bgjde9eCPQF-5FEWxsZE34p/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS SEMI LUG TYPE   250MM -  UNDRILLED",
+          "uom": "PCS",
+          "price": 1350
+        }
+      ]
+    },
+    {
+      "name": "Butterfly Valve Jis Semi Lug Type   300mm-  Undrilled",
+      "categorySlug": "butterfly-semi-lug-type",
+      "description": "Body : DI ( Ductile Iron) , Disc : SS 304, Seat : NBR , Gear Operated Valves are available in other Variant also such as in respect to Valves Body  Materias, Disc Type, Actuator Type, for such more detials kindly Contact Sales Team !!!",
+      "image": "https://drive.google.com/uc?export=view&id=1FswpEPOKOZdD_1pthhGfdOHxdJK5qllQ",
+      "datasheetUrl": "https://drive.google.com/file/d/15DNgFq5V4Bgjde9eCPQF-5FEWxsZE34p/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "BUTTERFLYVAL",
+          "description": "BUTTERFLY VALVE JIS SEMI LUG TYPE   300MM-  UNDRILLED",
+          "uom": "PCS",
+          "price": 1600
+        }
+      ]
+    }
+  ]
+}

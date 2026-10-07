@@ -34,6 +34,7 @@ export type Product = {
   categoryPath?: string[];
   description: string;
   image: string;
+  datasheetUrl?: string | null;
   hasImpa?: boolean;
   price?: number;
   displayPrice?: number;

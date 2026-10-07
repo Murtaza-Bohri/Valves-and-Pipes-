@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ProductImage } from "@/components/ProductImage";
 import type { Product } from "@/lib/products";
 
 type RelatedProductsProps = {
@@ -34,7 +34,7 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
             className="group overflow-hidden border border-[#e8e8e8] bg-white transition-shadow hover:shadow-md"
           >
             <div className="relative aspect-square overflow-hidden bg-white">
-              <Image
+              <ProductImage
                 src={product.image}
                 alt={product.name}
                 fill

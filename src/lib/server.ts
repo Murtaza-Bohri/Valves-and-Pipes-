@@ -3,6 +3,23 @@ import { cookies } from "next/headers";
 import type { Database } from "@/types/database";
 import { getSupabasePublishableKey, getSupabaseUrl } from "@/lib/supabase/env";
 
+async function fetchWithTimeout(
+  input: RequestInfo | URL,
+  init?: RequestInit
+): Promise<Response> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 5_000);
+
+  try {
+    return await fetch(input, {
+      ...init,
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 export async function createClient() {
   const cookieStore = await cookies();
 
@@ -10,6 +27,9 @@ export async function createClient() {
     getSupabaseUrl(),
     getSupabasePublishableKey(),
     {
+      global: {
+        fetch: fetchWithTimeout,
+      },
       cookies: {
         getAll() {
           return cookieStore.getAll();

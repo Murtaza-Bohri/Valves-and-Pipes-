@@ -12,6 +12,13 @@ import {
 } from "@/lib/categories";
 import { mapDbProductToProduct } from "@/lib/pricing";
 import {
+  getFallbackCategories,
+  dedupeProducts,
+  getFallbackProducts,
+  getFallbackProductsByCategorySlug,
+  isSupabaseConnectivityError,
+} from "@/lib/catalog-fallback";
+import {
   fallbackCategories,
   getCategoryImage,
   type Product,
@@ -20,17 +27,7 @@ import {
 import { slugify } from "@/lib/slug";
 import type { DbCategory, DbLegacyProduct, DbProduct } from "@/types/database";
 
-const NORMALIZED_PRODUCT_SELECT = `
-  id,
-  name,
-  slug,
-  description,
-  main_image,
-  sort_order,
-  category_id,
-  has_impa,
-  price,
-  categories ( name, slug ),
+const PRODUCT_IMPA_SELECT = `
   product_impa (
     id,
     impa_number,
@@ -41,7 +38,76 @@ const NORMALIZED_PRODUCT_SELECT = `
   )
 `;
 
+const NORMALIZED_PRODUCT_SELECT = `
+  id,
+  name,
+  slug,
+  description,
+  main_image,
+  datasheet_url,
+  sort_order,
+  category_id,
+  has_impa,
+  price,
+  categories ( name, slug ),
+  ${PRODUCT_IMPA_SELECT}
+`;
+
+const NORMALIZED_PRODUCT_SELECT_NO_DATASHEET = `
+  id,
+  name,
+  slug,
+  description,
+  main_image,
+  sort_order,
+  category_id,
+  has_impa,
+  price,
+  categories ( name, slug ),
+  ${PRODUCT_IMPA_SELECT}
+`;
+
+/** Category / listing pages — no nested IMPA rows (much faster). */
+const LIST_PRODUCT_SELECT = `
+  id,
+  name,
+  slug,
+  description,
+  main_image,
+  sort_order,
+  category_id,
+  has_impa,
+  price,
+  categories ( name, slug )
+`;
+
+const LIST_PRODUCT_SELECT_WITH_DATASHEET = `
+  id,
+  name,
+  slug,
+  description,
+  main_image,
+  datasheet_url,
+  sort_order,
+  category_id,
+  has_impa,
+  price,
+  categories ( name, slug )
+`;
+
 const MINIMAL_PRODUCT_SELECT = `
+  id,
+  name,
+  slug,
+  description,
+  main_image,
+  datasheet_url,
+  sort_order,
+  category_id,
+  categories ( name, slug )
+`;
+
+const MINIMAL_PRODUCT_SELECT_NO_DATASHEET = `
   id,
   name,
   slug,
@@ -51,6 +117,24 @@ const MINIMAL_PRODUCT_SELECT = `
   category_id,
   categories ( name, slug )
 `;
+
+function isMissingDatasheetColumnError(message: string | undefined) {
+  return Boolean(message?.includes("datasheet_url"));
+}
+
+let catalogSupportsDatasheetUrl: boolean | null = null;
+
+async function ensureDatasheetColumnKnown(
+  supabase: Awaited<ReturnType<typeof createSupabaseServerClient>>
+) {
+  if (catalogSupportsDatasheetUrl != null) {
+    return catalogSupportsDatasheetUrl;
+  }
+
+  const { error } = await supabase.from("products").select("datasheet_url").limit(0);
+  catalogSupportsDatasheetUrl = !isMissingDatasheetColumnError(error?.message);
+  return catalogSupportsDatasheetUrl;
+}
 
 function mapDbCategoryToStoreCategory(category: DbCategory): StoreCategory {
   return {
@@ -108,7 +192,9 @@ function mapLegacyProduct(row: DbLegacyProduct): Product {
 export const getCategories = cache(async (): Promise<DbCategory[]> => {
   noStore();
 
-  if (!isSupabaseConfigured()) return [];
+  if (!isSupabaseConfigured()) {
+    return getFallbackCategories();
+  }
 
   try {
     const supabase = await createSupabaseServerClient();
@@ -117,10 +203,20 @@ export const getCategories = cache(async (): Promise<DbCategory[]> => {
       .select("*")
       .order("sort_order", { ascending: true });
 
-    if (error) return [];
-    return (data as DbCategory[]) ?? [];
+    if (error) {
+      if (isSupabaseConnectivityError(error.message)) {
+        return getFallbackCategories();
+      }
+      return [];
+    }
+
+    if (data?.length) {
+      return data as DbCategory[];
+    }
+
+    return getFallbackCategories();
   } catch {
-    return [];
+    return getFallbackCategories();
   }
 });
 
@@ -168,40 +264,62 @@ export const getCategoryBreadcrumbTrail = cache(
   }
 );
 
+function enrichProducts(products: Product[], categories: DbCategory[]) {
+  return products.map((product) => enrichProductCategories(product, categories));
+}
+
+function logCatalogIssue(message: string) {
+  if (process.env.NODE_ENV === "development") {
+    console.warn(`[catalog] ${message}`);
+  }
+}
+
 export const getProducts = cache(async (): Promise<Product[]> => {
   noStore();
 
   if (!isSupabaseConfigured()) {
-    return [];
+    const categories = getFallbackCategories();
+    return enrichProducts(getFallbackProducts(), categories);
   }
 
   const categories = await getCategories();
 
   try {
     const supabase = await createSupabaseServerClient();
+    const hasDatasheetColumn = await ensureDatasheetColumnKnown(supabase);
 
-    const normalized = await supabase
-      .from("products")
-      .select(NORMALIZED_PRODUCT_SELECT)
-      .order("sort_order", { ascending: true });
+    const normalized = hasDatasheetColumn
+      ? await supabase
+          .from("products")
+          .select(LIST_PRODUCT_SELECT_WITH_DATASHEET)
+          .order("sort_order", { ascending: true })
+      : await supabase
+          .from("products")
+          .select(LIST_PRODUCT_SELECT)
+          .order("sort_order", { ascending: true });
 
     if (!normalized.error && normalized.data?.length) {
-      const first = normalized.data[0] as Record<string, unknown>;
-      if ("category_id" in first && "main_image" in first) {
-        return (normalized.data as unknown as DbProduct[])
-          .map(mapDbProductToProduct)
-          .map((product) => enrichProductCategories(product, categories));
-      }
+      return (normalized.data as unknown as DbProduct[])
+        .map(mapDbProductToProduct)
+        .map((product) => enrichProductCategories(product, categories));
     }
 
-    if (normalized.error) {
-      console.error("[catalog] products query failed:", normalized.error.message);
+    if (normalized.error && isSupabaseConnectivityError(normalized.error.message)) {
+      logCatalogIssue(
+        "Supabase is unreachable. Using local catalog fallback. Verify NEXT_PUBLIC_SUPABASE_URL in .env.local."
+      );
+      return enrichProducts(getFallbackProducts(), categories);
     }
 
-    const minimal = await supabase
-      .from("products")
-      .select(MINIMAL_PRODUCT_SELECT)
-      .order("sort_order", { ascending: true });
+    const minimal = hasDatasheetColumn
+      ? await supabase
+          .from("products")
+          .select(MINIMAL_PRODUCT_SELECT)
+          .order("sort_order", { ascending: true })
+      : await supabase
+          .from("products")
+          .select(MINIMAL_PRODUCT_SELECT_NO_DATASHEET)
+          .order("sort_order", { ascending: true });
 
     if (!minimal.error && minimal.data?.length) {
       return (minimal.data as unknown as DbProduct[])
@@ -216,6 +334,10 @@ export const getProducts = cache(async (): Promise<Product[]> => {
         .map((product) => enrichProductCategories(product, categories));
     }
 
+    if (minimal.error && isSupabaseConnectivityError(minimal.error.message)) {
+      return enrichProducts(getFallbackProducts(), categories);
+    }
+
     const legacy = await supabase
       .from("products")
       .select("id, name, category, description, image, sort_order")
@@ -225,9 +347,9 @@ export const getProducts = cache(async (): Promise<Product[]> => {
       return (legacy.data as unknown as DbLegacyProduct[]).map(mapLegacyProduct);
     }
 
-    return [];
+    return enrichProducts(getFallbackProducts(), categories);
   } catch {
-    return [];
+    return enrichProducts(getFallbackProducts(), categories);
   }
 });
 
@@ -235,37 +357,85 @@ async function fetchProductsByCategoryIds(categoryIds: string[]): Promise<Produc
   if (!categoryIds.length) return [];
 
   const categories = await getCategories();
-  const supabase = await createSupabaseServerClient();
 
-  const normalized = await supabase
-    .from("products")
-    .select(NORMALIZED_PRODUCT_SELECT)
-    .in("category_id", categoryIds)
-    .order("sort_order", { ascending: true });
+  if (!isSupabaseConfigured() || categoryIds.some((id) => id.startsWith("fallback-"))) {
+    const slugById = new Map(categories.map((category) => [category.id, category.slug]));
+    const targetSlugs = new Set(
+      categoryIds
+        .map((id) => slugById.get(id))
+        .filter((slug): slug is string => Boolean(slug))
+    );
 
-  if (!normalized.error && normalized.data?.length) {
-    return (normalized.data as unknown as DbProduct[])
-      .map(mapDbProductToProduct)
-      .map((product) => enrichProductCategories(product, categories));
+    return dedupeProducts(
+      getFallbackProducts().filter((product) => {
+        if (product.categoryId && categoryIds.includes(product.categoryId)) return true;
+        return product.categorySlug ? targetSlugs.has(product.categorySlug) : false;
+      })
+    );
   }
 
-  const minimal = await supabase
-    .from("products")
-    .select(MINIMAL_PRODUCT_SELECT)
-    .in("category_id", categoryIds)
-    .order("sort_order", { ascending: true });
+  try {
+    const supabase = await createSupabaseServerClient();
+    const hasDatasheetColumn = await ensureDatasheetColumnKnown(supabase);
 
-  if (!minimal.error && minimal.data?.length) {
-    return (minimal.data as unknown as DbProduct[])
-      .map((row) =>
-        mapDbProductToProduct({
-          ...row,
-          has_impa: false,
-          price: 0,
-          product_impa: [],
-        })
-      )
-      .map((product) => enrichProductCategories(product, categories));
+    const normalized = hasDatasheetColumn
+      ? await supabase
+          .from("products")
+          .select(LIST_PRODUCT_SELECT_WITH_DATASHEET)
+          .in("category_id", categoryIds)
+          .order("sort_order", { ascending: true })
+      : await supabase
+          .from("products")
+          .select(LIST_PRODUCT_SELECT)
+          .in("category_id", categoryIds)
+          .order("sort_order", { ascending: true });
+
+    if (!normalized.error && normalized.data?.length) {
+      return (normalized.data as unknown as DbProduct[])
+        .map(mapDbProductToProduct)
+        .map((product) => enrichProductCategories(product, categories));
+    }
+
+    if (normalized.error && isSupabaseConnectivityError(normalized.error.message)) {
+      return getFallbackProductsByCategorySlug(
+        categories.find((category) => category.id === categoryIds[0])?.slug ?? ""
+      );
+    }
+
+    const minimal = hasDatasheetColumn
+      ? await supabase
+          .from("products")
+          .select(MINIMAL_PRODUCT_SELECT)
+          .in("category_id", categoryIds)
+          .order("sort_order", { ascending: true })
+      : await supabase
+          .from("products")
+          .select(MINIMAL_PRODUCT_SELECT_NO_DATASHEET)
+          .in("category_id", categoryIds)
+          .order("sort_order", { ascending: true });
+
+    if (!minimal.error && minimal.data?.length) {
+      return (minimal.data as unknown as DbProduct[])
+        .map((row) =>
+          mapDbProductToProduct({
+            ...row,
+            has_impa: false,
+            price: 0,
+            product_impa: [],
+          })
+        )
+        .map((product) => enrichProductCategories(product, categories));
+    }
+
+    if (minimal.error && isSupabaseConnectivityError(minimal.error.message)) {
+      return getFallbackProductsByCategorySlug(
+        categories.find((category) => category.id === categoryIds[0])?.slug ?? ""
+      );
+    }
+  } catch {
+    return getFallbackProductsByCategorySlug(
+      categories.find((category) => category.id === categoryIds[0])?.slug ?? ""
+    );
   }
 
   return [];
@@ -277,6 +447,10 @@ export const getProductsByCategorySlug = cache(async (slug: string): Promise<Pro
   const normalizedSlug = slug.trim().toLowerCase();
   const category = await getCategoryBySlug(normalizedSlug);
   if (!category) return [];
+
+  if (category.id.startsWith("fallback-")) {
+    return getFallbackProductsByCategorySlug(normalizedSlug);
+  }
 
   if (isSupabaseConfigured() && !category.id.startsWith("fallback-")) {
     try {
@@ -310,12 +484,19 @@ export const getProductBySlug = cache(async (slug: string): Promise<Product | nu
 
   try {
     const supabase = await createSupabaseServerClient();
+    const hasDatasheetColumn = await ensureDatasheetColumnKnown(supabase);
 
-    const normalized = await supabase
-      .from("products")
-      .select(NORMALIZED_PRODUCT_SELECT)
-      .eq("slug", normalizedSlug)
-      .maybeSingle();
+    const normalized = hasDatasheetColumn
+      ? await supabase
+          .from("products")
+          .select(NORMALIZED_PRODUCT_SELECT)
+          .eq("slug", normalizedSlug)
+          .maybeSingle()
+      : await supabase
+          .from("products")
+          .select(NORMALIZED_PRODUCT_SELECT_NO_DATASHEET)
+          .eq("slug", normalizedSlug)
+          .maybeSingle();
 
     if (!normalized.error && normalized.data) {
       return enrichProductCategories(
@@ -324,11 +505,17 @@ export const getProductBySlug = cache(async (slug: string): Promise<Product | nu
       );
     }
 
-    const minimal = await supabase
-      .from("products")
-      .select(MINIMAL_PRODUCT_SELECT)
-      .eq("slug", normalizedSlug)
-      .maybeSingle();
+    const minimal = hasDatasheetColumn
+      ? await supabase
+          .from("products")
+          .select(MINIMAL_PRODUCT_SELECT)
+          .eq("slug", normalizedSlug)
+          .maybeSingle()
+      : await supabase
+          .from("products")
+          .select(MINIMAL_PRODUCT_SELECT_NO_DATASHEET)
+          .eq("slug", normalizedSlug)
+          .maybeSingle();
 
     if (!minimal.error && minimal.data) {
       const row = minimal.data as unknown as DbProduct;
@@ -397,10 +584,16 @@ export async function getAdminProducts(): Promise<DbProduct[]> {
   if (!isSupabaseConfigured()) return [];
 
   const supabase = await createSupabaseServerClient();
-  const { data, error } = await supabase
-    .from("products")
-    .select(NORMALIZED_PRODUCT_SELECT)
-    .order("sort_order", { ascending: true });
+  const hasDatasheetColumn = await ensureDatasheetColumnKnown(supabase);
+  const { data, error } = hasDatasheetColumn
+    ? await supabase
+        .from("products")
+        .select(NORMALIZED_PRODUCT_SELECT)
+        .order("sort_order", { ascending: true })
+    : await supabase
+        .from("products")
+        .select(NORMALIZED_PRODUCT_SELECT_NO_DATASHEET)
+        .order("sort_order", { ascending: true });
 
   if (error || !data) return [];
   return data as unknown as DbProduct[];

@@ -39,6 +39,7 @@ export type DbProduct = {
   category_id: string;
   brand_id: string | null;
   main_image: string;
+  datasheet_url?: string | null;
   has_impa: boolean;
   price: number | null;
   is_active: boolean;

@@ -7,10 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seed:admin": "node --env-file=.env.local scripts/seed-admin.mjs",
-    "seed:valves": "node --env-file=.env.local scripts/seed-valve-products.mjs",
-    "seed:categories": "node --env-file=.env.local scripts/seed-category-hierarchy.mjs",
-    "db:migrate": "node --env-file=.env.local scripts/apply-migration.mjs"
+    "seed:check": "node scripts/check-supabase.mjs",
+    "seed:admin": "node scripts/seed-admin.mjs",
+    "seed:valves": "node scripts/seed-valve-products.mjs",
+    "seed:categories": "node scripts/seed-category-hierarchy.mjs",
+    "seed:butterfly": "node scripts/import-butterfly-valves.mjs",
+    "seed:butterfly:export": "node scripts/import-butterfly-valves.mjs --export-only",
+    "db:migrate": "node scripts/apply-migration.mjs",
+    "db:datasheet-column": "node scripts/apply-sql-file.mjs supabase/sql/14_product_datasheet_url.sql",
+    "media:mirror": "node scripts/mirror-product-media.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -38,6 +43,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "xlsx": "^0.18.5"
   }
 }

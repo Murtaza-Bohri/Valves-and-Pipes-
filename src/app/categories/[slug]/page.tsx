@@ -10,7 +10,6 @@ import {
   getCategoryBySlug,
   getChildStoreCategories,
   getProductsByCategorySlug,
-  getRootStoreCategories,
 } from "@/lib/products-data";
 
 type CategoryPageProps = {
@@ -48,10 +47,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound();
   }
 
-  const [products, childCategories, rootCategories, breadcrumbs] = await Promise.all([
+  const [products, childCategories, breadcrumbs] = await Promise.all([
     getProductsByCategorySlug(slug),
     getChildStoreCategories(category.id),
-    getRootStoreCategories(),
     getCategoryBreadcrumbTrail(category.id),
   ]);
 
@@ -70,7 +68,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       <div className="mt-10">
         <ProductsSection
           products={products}
-          categories={rootCategories}
+          categories={[]}
           compact
           showFilter={false}
           syncUrl={false}

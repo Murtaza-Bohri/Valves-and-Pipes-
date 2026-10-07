@@ -1,5 +1,6 @@
 import type { DbProduct, DbProductImpa } from "@/types/database";
 import type { Product } from "@/lib/products";
+import { resolveProductImageUrl } from "@/lib/image-url";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export function getDefaultImpaEntry(
@@ -56,7 +57,8 @@ export function mapDbProductToProduct(row: DbProduct): Product {
     categoryId: row.category_id,
     categorySlug: row.categories?.slug,
     description: row.description,
-    image: row.main_image,
+    image: resolveProductImageUrl(row.main_image),
+    datasheetUrl: row.datasheet_url ?? null,
     hasImpa: row.has_impa,
     price: row.has_impa ? undefined : displayPrice,
     displayPrice,

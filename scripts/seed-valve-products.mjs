@@ -4,6 +4,14 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
+import {
+  assertSupabaseReachable,
+  getSupabaseServiceConfig,
+} from "./lib/load-env.mjs";
+import {
+  ensureProductMediaBucket,
+  mirrorProductMediaToStorage,
+} from "./lib/product-media-storage.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataPath = join(__dirname, "..", "data", "valve-products.json");
@@ -12,15 +20,8 @@ const impaSheetPath = join(__dirname, "..", "data", "valve-impa-sheet.json");
 const seed = JSON.parse(readFileSync(dataPath, "utf8"));
 const descriptions = JSON.parse(readFileSync(descriptionsPath, "utf8"));
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/+$/, "");
-const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-if (!supabaseUrl || !serviceRoleKey) {
-  console.error(
-    "Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in .env.local"
-  );
-  process.exit(1);
-}
+await assertSupabaseReachable();
+const { url: supabaseUrl, serviceRoleKey } = getSupabaseServiceConfig();
 
 const supabase = createClient(supabaseUrl, serviceRoleKey, {
   auth: { autoRefreshToken: false, persistSession: false },
@@ -72,6 +73,8 @@ if (removePlaceholderError) {
   console.warn("Could not remove placeholder Valves product:", removePlaceholderError.message);
 }
 
+await ensureProductMediaBucket(supabase);
+
 let productsCreated = 0;
 let impaCreated = 0;
 const impaSheet = [];
@@ -83,8 +86,19 @@ for (let index = 0; index < seed.products.length; index += 1) {
     item.description ??
     descriptions[item.name] ??
     `${item.name}. Bronze industrial valve with IMPA-coded sizes and AED pricing.`;
-  const mainImage = item.image ?? seed.defaultImage;
+  let mainImage = item.image ?? seed.defaultImage;
   const sortOrder = index + 1;
+
+  try {
+    const storedImage = await mirrorProductMediaToStorage(supabase, supabaseUrl, {
+      productSlug: slug,
+      sourceUrl: mainImage,
+      kind: "image",
+    });
+    if (storedImage) mainImage = storedImage;
+  } catch (mirrorError) {
+    console.warn(`  Image upload failed for "${item.name}": ${mirrorError.message}`);
+  }
 
   const { data: product, error: productError } = await supabase
     .from("products")

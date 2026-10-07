@@ -1,9 +1,15 @@
 #!/usr/bin/env node
 
 import { createClient } from "@supabase/supabase-js";
+import {
+  assertSupabaseReachable,
+  getSupabaseServiceConfig,
+  loadEnvLocal,
+} from "./lib/load-env.mjs";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/+$/, "");
-const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+loadEnvLocal();
+await assertSupabaseReachable();
+const { url: supabaseUrl, serviceRoleKey } = getSupabaseServiceConfig();
 const publishableKey =
   process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -13,15 +19,8 @@ const adminDisplayName =
   process.env.ADMIN_DISPLAY_NAME ?? "Murtaza Bohri";
 const adminPassword = process.env.ADMIN_PASSWORD;
 
-if (!supabaseUrl || !serviceRoleKey) {
-  console.error(
-    "Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in environment."
-  );
-  process.exit(1);
-}
-
 if (!adminPassword) {
-  console.error("Missing ADMIN_PASSWORD in environment.");
+  console.error("Missing ADMIN_PASSWORD in .env.local");
   process.exit(1);
 }
 

@@ -1,5 +1,6 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/admin";
+import { resolveProductImageUrl } from "@/lib/image-url";
 import { getCategoryBreadcrumbs } from "@/lib/categories";
 import type { DbCategory } from "@/types/database";
 
@@ -133,7 +134,7 @@ export async function searchCatalog(
       title: product.name,
       subtitle: pathById.get(product.category_id),
       href: `/products/${product.slug}`,
-      image: product.main_image,
+      image: resolveProductImageUrl(product.main_image),
     });
   }
 
@@ -168,7 +169,7 @@ export async function searchCatalog(
         title: product.name,
         subtitle: impa.item_description || pathById.get(product.category_id),
         href: `/products/${product.slug}`,
-        image: product.main_image,
+        image: resolveProductImageUrl(product.main_image),
         impaNumber: impa.impa_number,
       });
     }
