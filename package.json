@@ -15,7 +15,8 @@
     "seed:butterfly:export": "node scripts/import-butterfly-valves.mjs --export-only",
     "db:migrate": "node scripts/apply-migration.mjs",
     "db:datasheet-column": "node scripts/apply-sql-file.mjs supabase/sql/14_product_datasheet_url.sql",
-    "media:mirror": "node scripts/mirror-product-media.mjs"
+    "media:mirror": "node scripts/mirror-product-media.mjs",
+    "media:optimize": "node scripts/mirror-product-media.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -42,6 +43,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4",
     "typescript": "^5",
     "xlsx": "^0.18.5"

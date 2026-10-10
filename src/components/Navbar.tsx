@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
+import { NavbarMobileMenu } from "@/components/NavbarMobileMenu";
 import { AnimatePresence, motion } from "motion/react";
 import { CartLink } from "@/components/CartLink";
 import { NavbarCategoryMenu } from "@/components/NavbarCategoryMenu";
@@ -26,6 +27,7 @@ export function Navbar({ categories = [] }: NavbarProps) {
   const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const productsRef = useRef<HTMLDivElement>(null);
   const solid = !isHome || scrolled;
 
@@ -61,8 +63,8 @@ export function Navbar({ categories = [] }: NavbarProps) {
           : "bg-transparent"
       } overflow-visible`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:h-[72px] sm:px-8">
-        <Link href="/" className="relative z-10">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-4 sm:h-[72px] sm:gap-4 sm:px-8">
+        <Link href="/" className="relative z-10 shrink-0">
           <Image
             src="/logo.png"
             alt="Himmat"
@@ -143,12 +145,12 @@ export function Navbar({ categories = [] }: NavbarProps) {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <NavbarSearch solid={solid} />
           <CartLink className={linkClass} />
           <Link
             href="/contact"
-            className={`hidden text-[13px] font-semibold tracking-[0.14em] uppercase transition-colors sm:inline-flex ${
+            className={`hidden text-[13px] font-semibold tracking-[0.14em] uppercase transition-colors md:inline-flex ${
               solid
                 ? "bg-[#bd1115] px-4 py-2.5 text-white hover:bg-[#9a0e12]"
                 : "text-white hover:text-white/80"
@@ -156,8 +158,24 @@ export function Navbar({ categories = [] }: NavbarProps) {
           >
             Get in touch
           </Link>
+          <button
+            type="button"
+            className={`inline-flex p-2 md:hidden ${linkClass}`}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-nav"
+            onClick={() => setMobileMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu className="h-6 w-6" aria-hidden />
+          </button>
         </div>
       </div>
+
+      <NavbarMobileMenu
+        open={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+        categories={categories}
+      />
     </motion.header>
   );
 }

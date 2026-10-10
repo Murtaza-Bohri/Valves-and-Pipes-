@@ -1,5 +1,6 @@
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
+import sharp from "sharp";
 
 export const PRODUCT_MEDIA_BUCKET = "product-media";
 
@@ -17,13 +18,24 @@ export function isRemoteMediaUrl(url) {
   return /^https?:\/\//i.test(value);
 }
 
-function extensionForContentType(contentType, kind) {
-  const type = String(contentType ?? "").toLowerCase();
-  if (type.includes("png")) return "png";
-  if (type.includes("webp")) return "webp";
-  if (type.includes("jpeg") || type.includes("jpg")) return "jpg";
-  if (type.includes("pdf")) return "pdf";
-  return kind === "datasheet" ? "pdf" : "jpg";
+const PRODUCT_IMAGE_MAX_WIDTH = 1200;
+const PRODUCT_IMAGE_WEBP_QUALITY = 82;
+
+export function productImageNeedsOptimization(url) {
+  if (!url) return true;
+  if (!isSupabaseStoragePublicUrl(url)) return true;
+  return !String(url).includes("/main.webp");
+}
+
+async function optimizeProductImageBuffer(buffer) {
+  return sharp(buffer)
+    .rotate()
+    .resize(PRODUCT_IMAGE_MAX_WIDTH, PRODUCT_IMAGE_MAX_WIDTH, {
+      fit: "inside",
+      withoutEnlargement: true,
+    })
+    .webp({ quality: PRODUCT_IMAGE_WEBP_QUALITY, effort: 4 })
+    .toBuffer();
 }
 
 async function fetchDriveBinary(sourceUrl, kind) {
@@ -122,7 +134,7 @@ export async function mirrorProductMediaToStorage(
   const source = String(sourceUrl ?? "").trim();
   if (!slug || !source) return null;
 
-  if (isSupabaseStoragePublicUrl(source)) {
+  if (kind === "image" && isSupabaseStoragePublicUrl(source) && source.includes("/main.webp")) {
     return source;
   }
 
@@ -135,13 +147,25 @@ export async function mirrorProductMediaToStorage(
     return null;
   }
 
-  const ext = extensionForContentType(binary.contentType, kind);
-  const storagePath = `${slug}/${kind === "datasheet" ? "datasheet" : "main"}.${ext}`;
+  let uploadBuffer = binary.buffer;
+  let contentType = binary.contentType;
+  let storagePath;
+
+  if (kind === "image") {
+    uploadBuffer = await optimizeProductImageBuffer(binary.buffer);
+    contentType = "image/webp";
+    storagePath = `${slug}/main.webp`;
+  } else {
+    const type = String(binary.contentType ?? "").toLowerCase();
+    const ext = type.includes("pdf") ? "pdf" : "pdf";
+    storagePath = `${slug}/datasheet.${ext}`;
+    contentType = type.includes("pdf") ? "application/pdf" : binary.contentType;
+  }
 
   const { error: uploadError } = await supabase.storage
     .from(PRODUCT_MEDIA_BUCKET)
-    .upload(storagePath, binary.buffer, {
-      contentType: binary.contentType,
+    .upload(storagePath, uploadBuffer, {
+      contentType,
       upsert: true,
     });
 

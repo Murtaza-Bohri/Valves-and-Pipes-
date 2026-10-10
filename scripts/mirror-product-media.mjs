@@ -10,6 +10,7 @@ import {
   isRemoteMediaUrl,
   isSupabaseStoragePublicUrl,
   mirrorProductMediaToStorage,
+  productImageNeedsOptimization,
 } from "./lib/product-media-storage.mjs";
 
 await assertSupabaseReachable();
@@ -48,10 +49,12 @@ for (const product of products ?? []) {
   let datasheetUrl = hasDatasheetColumn ? product.datasheet_url : null;
   let changed = false;
 
-  const shouldMirrorImage =
-    mainImage &&
-    !isSupabaseStoragePublicUrl(mainImage) &&
-    (isRemoteMediaUrl(mainImage) || String(mainImage).startsWith("/"));
+    const shouldMirrorImage =
+      mainImage &&
+      productImageNeedsOptimization(mainImage) &&
+      (isRemoteMediaUrl(mainImage) ||
+        String(mainImage).startsWith("/") ||
+        isSupabaseStoragePublicUrl(mainImage));
 
   if (shouldMirrorImage) {
     const stored = await mirrorProductMediaToStorage(supabase, supabaseUrl, {

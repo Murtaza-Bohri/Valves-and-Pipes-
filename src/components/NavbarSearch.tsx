@@ -8,6 +8,9 @@ import type { CatalogSearchResult } from "@/lib/search";
 
 type NavbarSearchProps = {
   solid?: boolean;
+  /** Full-width search for mobile drawer */
+  mobile?: boolean;
+  onNavigate?: () => void;
 };
 
 const DEBOUNCE_MS = 120;
@@ -31,7 +34,11 @@ function setCachedResults(query: string, results: CatalogSearchResult[]) {
   }
 }
 
-export function NavbarSearch({ solid = true }: NavbarSearchProps) {
+export function NavbarSearch({
+  solid = true,
+  mobile = false,
+  onNavigate,
+}: NavbarSearchProps) {
   const listboxId = useId();
   const containerRef = useRef<HTMLDivElement>(null);
   const requestIdRef = useRef(0);
@@ -110,7 +117,10 @@ export function NavbarSearch({ solid = true }: NavbarSearchProps) {
   const trimmedQuery = query.trim();
 
   return (
-    <div ref={containerRef} className="relative hidden sm:block">
+    <div
+      ref={containerRef}
+      className={`relative ${mobile ? "block w-full" : "hidden sm:block"}`}
+    >
       <Search
         className={`pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 ${iconClass}`}
         aria-hidden
@@ -139,14 +149,20 @@ export function NavbarSearch({ solid = true }: NavbarSearchProps) {
         aria-expanded={open}
         aria-controls={listboxId}
         autoComplete="off"
-        className={`h-9 w-44 border py-2 pr-3 pl-9 text-sm outline-none transition-colors lg:w-56 ${inputClass}`}
+        className={`border py-2 pr-3 pl-9 text-sm outline-none transition-colors ${
+          mobile ? "h-10 w-full" : "h-9 w-44 lg:w-56"
+        } ${inputClass}`}
       />
 
       {open && trimmedQuery.length >= 2 ? (
         <div
           id={listboxId}
           role="listbox"
-          className="absolute right-0 top-[calc(100%+0.5rem)] z-50 max-h-[min(70vh,420px)] w-[min(100vw-2rem,360px)] overflow-y-auto border border-[#e8e8e8] bg-white py-2 shadow-xl"
+          className={`absolute z-50 max-h-[min(70vh,420px)] overflow-y-auto border border-[#e8e8e8] bg-white py-2 shadow-xl ${
+            mobile
+              ? "left-0 right-0 top-[calc(100%+0.5rem)]"
+              : "right-0 top-[calc(100%+0.5rem)] w-[min(100vw-2rem,360px)]"
+          }`}
         >
           {loading && results.length === 0 ? (
             <div className="flex items-center gap-2 px-4 py-3 text-sm text-[#6b6b6b]">
@@ -173,6 +189,7 @@ export function NavbarSearch({ solid = true }: NavbarSearchProps) {
                   onClick={() => {
                     setOpen(false);
                     setQuery("");
+                    onNavigate?.();
                   }}
                   className="flex items-start gap-3 px-4 py-3 transition-colors hover:bg-[#f7f7f7]"
                 >

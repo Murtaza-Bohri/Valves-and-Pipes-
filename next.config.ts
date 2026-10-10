@@ -6,6 +6,8 @@ const supabaseHostname = process.env.NEXT_PUBLIC_SUPABASE_URL
 
 const nextConfig: NextConfig = {
   images: {
+    // Serve images as-is (Supabase Storage WebP from seed scripts). Avoids Vercel Image Optimization usage.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

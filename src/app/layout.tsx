@@ -26,7 +26,7 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", display.variable, "font-sans", geist.variable)}
     >
-      <body className="min-h-full flex flex-col font-[family-name:var(--font-sans)]">
+      <body className="flex min-h-full flex-col overflow-x-hidden font-[family-name:var(--font-sans)]">
         <JsonLd />
         {children}
         <FloatingWhatsAppButton />
