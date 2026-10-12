@@ -1,0 +1,1127 @@
+{
+  "sourceFile": "C:\\Users\\hussain\\Desktop\\himmat-oil-fields\\data\\PRODUCT LIST_CI_JIS SERIES.xlsx",
+  "defaultImage": "/products/valves.png",
+  "products": [
+    {
+      "name": "Gate Valve Cast-Iron Flanged, F7363 5kg",
+      "categorySlug": "jis-gate-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=1J2l69Uf2MmluDoZgSrW10mmL_beeQzW1",
+      "datasheetUrl": "https://drive.google.com/file/d/1QB9-Bzl9i7kkVPMbMePtv-d1zX0sRN9S/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750801",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7363 5KG-50MM",
+          "uom": "PCS",
+          "price": 270,
+          "priceInquiry": false
+        },
+        {
+          "number": "750802",
+          "description": "GATE VALVE CAST-IRON FLANGED. F7363 5KG-65MM",
+          "uom": "PCS",
+          "price": 315,
+          "priceInquiry": false
+        },
+        {
+          "number": "750803",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7363 5KG-80MM",
+          "uom": "PCS",
+          "price": 450,
+          "priceInquiry": false
+        },
+        {
+          "number": "750804",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7363 5KG-100MM",
+          "uom": "PCS",
+          "price": 575,
+          "priceInquiry": false
+        },
+        {
+          "number": "750805",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7363 5KG-125MM",
+          "uom": "PCS",
+          "price": 950,
+          "priceInquiry": false
+        },
+        {
+          "number": "750806",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7363 5KG-150MM",
+          "uom": "PCS",
+          "price": 1200,
+          "priceInquiry": false
+        },
+        {
+          "number": "750807",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7363 5KG-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750808",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7363 5KG-250MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750809",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7363 5KG-300MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Gate Valve Cast-Iron Flanged, F7364 10kg",
+      "categorySlug": "jis-gate-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=1J2l69Uf2MmluDoZgSrW10mmL_beeQzW1",
+      "datasheetUrl": "https://drive.google.com/file/d/1WVvJVAfnM69UHbHYimJ1wCZy8DZ2xLfb/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750821",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7364 10KG-50MM",
+          "uom": "PCS",
+          "price": 300,
+          "priceInquiry": false
+        },
+        {
+          "number": "750822",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7364 10KG-65MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "750823",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7364 10KG-80MM",
+          "uom": "PCS",
+          "price": 500,
+          "priceInquiry": false
+        },
+        {
+          "number": "750824",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7364 10KG-100MM",
+          "uom": "PCS",
+          "price": 700,
+          "priceInquiry": false
+        },
+        {
+          "number": "750825",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7364 10KG-125MM",
+          "uom": "PCS",
+          "price": 1100,
+          "priceInquiry": false
+        },
+        {
+          "number": "750826",
+          "description": "GATE VALVE CAST-IRON FLANGED, F7364 10KG-150MM",
+          "uom": "PCS",
+          "price": 1350,
+          "priceInquiry": false
+        },
+        {
+          "number": "750827",
+          "description": "GATE VALVE CAST-IRON FLANGED. F7364 10KG-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750828",
+          "description": "GATE VALVE CAST-IRON FLANGED. F7364 10KG-250MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750829",
+          "description": "GATE VALVE CAST-IRON FLANGED. F7364 10KG-300MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Globe Valve Cast-Iron Flanged, F7305 5kg",
+      "categorySlug": "jis-globe-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=1D5ZYrQ0OoSeSD7Ltsfyt8Aj698GI0ubm",
+      "datasheetUrl": "https://drive.google.com/file/d/1RTbc90DLssGB-cCeFkRMXY0H_-a39urE/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750201",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7305 5KG-50MM",
+          "uom": "PCS",
+          "price": 265,
+          "priceInquiry": false
+        },
+        {
+          "number": "750202",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7305 5KG-65MM",
+          "uom": "PCS",
+          "price": 325,
+          "priceInquiry": false
+        },
+        {
+          "number": "750203",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7305 5KG-80MM",
+          "uom": "PCS",
+          "price": 375,
+          "priceInquiry": false
+        },
+        {
+          "number": "750204",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7305 5KG-100MM",
+          "uom": "PCS",
+          "price": 550,
+          "priceInquiry": false
+        },
+        {
+          "number": "750205",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7305 5KG-125MM",
+          "uom": "PCS",
+          "price": 925,
+          "priceInquiry": false
+        },
+        {
+          "number": "750206",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7305 5KG-150MM",
+          "uom": "PCS",
+          "price": 1250,
+          "priceInquiry": false
+        },
+        {
+          "number": "750207",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7305 5KG-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750208",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7305 5KG-250MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750209",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7305 5KG-300MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Angle Valve Cast-Iron Flanged, F7306 5kg",
+      "categorySlug": "jis-angle-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=1v7Y6v2fH-XkbFayo9t-h93bt8A5_JKTu",
+      "datasheetUrl": "https://drive.google.com/file/d/14cQGM4bBcTdJKSLPWSa8Tm5OpVP_Ixxu/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750216",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7306 5KG-50MM",
+          "uom": "PCS",
+          "price": 250,
+          "priceInquiry": false
+        },
+        {
+          "number": "750217",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7306 5KG-65MM",
+          "uom": "PCS",
+          "price": 315,
+          "priceInquiry": false
+        },
+        {
+          "number": "750218",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7306 5KG-80MM",
+          "uom": "PCS",
+          "price": 365,
+          "priceInquiry": false
+        },
+        {
+          "number": "750219",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7306 5KG-100MM",
+          "uom": "PCS",
+          "price": 550,
+          "priceInquiry": false
+        },
+        {
+          "number": "750220",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7306 5KG-125MM",
+          "uom": "PCS",
+          "price": 900,
+          "priceInquiry": false
+        },
+        {
+          "number": "750221",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7306 5KG-150MM",
+          "uom": "PCS",
+          "price": 1200,
+          "priceInquiry": false
+        },
+        {
+          "number": "750222",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7306 5KG-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750223",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7306 5KG-250MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750224",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7306 5KG-300MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Globe Valve Cast-Iron Flanged, F7307 10kg",
+      "categorySlug": "jis-globe-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "/products/valves.png",
+      "datasheetUrl": "https://drive.google.com/file/d/1RTbc90DLssGB-cCeFkRMXY0H_-a39urE/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750231",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7307 10KG-50MM",
+          "uom": "PCS",
+          "price": 275,
+          "priceInquiry": false
+        },
+        {
+          "number": "750232",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7307 10KG-65MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "750233",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7307 10KG-80MM",
+          "uom": "PCS",
+          "price": 425,
+          "priceInquiry": false
+        },
+        {
+          "number": "750234",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7307 10KG-100MM",
+          "uom": "PCS",
+          "price": 675,
+          "priceInquiry": false
+        },
+        {
+          "number": "750235",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7307 10KG-125MM",
+          "uom": "PCS",
+          "price": 1100,
+          "priceInquiry": false
+        },
+        {
+          "number": "750236",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7307 10KG-150MM",
+          "uom": "PCS",
+          "price": 1450,
+          "priceInquiry": false
+        },
+        {
+          "number": "750237",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7307 10KG-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750238",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7307 10KG-250MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750239",
+          "description": "GLOBE VALVE CAST-IRON FLANGED, F7307 10KG-300MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Angle Valve Cast-Iron Flanged, F7308 10kg",
+      "categorySlug": "jis-angle-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "/products/valves.png",
+      "datasheetUrl": "https://drive.google.com/file/d/14cQGM4bBcTdJKSLPWSa8Tm5OpVP_Ixxu/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750246",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7308 10KG-50MM",
+          "uom": "PCS",
+          "price": 265,
+          "priceInquiry": false
+        },
+        {
+          "number": "750247",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7308 10KG-65MM",
+          "uom": "PCS",
+          "price": 335,
+          "priceInquiry": false
+        },
+        {
+          "number": "750248",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7308 10KG-80MM",
+          "uom": "PCS",
+          "price": 415,
+          "priceInquiry": false
+        },
+        {
+          "number": "750249",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7308 10KG-100MM",
+          "uom": "PCS",
+          "price": 650,
+          "priceInquiry": false
+        },
+        {
+          "number": "750250",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7308 10KG-125MM",
+          "uom": "PCS",
+          "price": 1025,
+          "priceInquiry": false
+        },
+        {
+          "number": "750251",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7308 10KG-150MM",
+          "uom": "PCS",
+          "price": 1400,
+          "priceInquiry": false
+        },
+        {
+          "number": "750252",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7308 10KG-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "750253",
+          "description": "ANGLE VALVE CAST-IRON FLANGED, F7308 10KG-250MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Globe Valve Screw Down Check, C-Iron Flanged F7353 5kg",
+      "categorySlug": "jis-globe-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=1qsBXsxKRqmJVdCgTnOGeQSOa8VRvvV2Z",
+      "datasheetUrl": "https://drive.google.com/file/d/1RTbc90DLssGB-cCeFkRMXY0H_-a39urE/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751101",
+          "description": "GLOBE VALVE SCREW DOWN CHECK. C-IRON FLANGED F7353 5KG-50MM",
+          "uom": "PCS",
+          "price": 265,
+          "priceInquiry": false
+        },
+        {
+          "number": "751102",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7353 5KG-65MM",
+          "uom": "PCS",
+          "price": 325,
+          "priceInquiry": false
+        },
+        {
+          "number": "751103",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7353 5KG-80MM",
+          "uom": "PCS",
+          "price": 375,
+          "priceInquiry": false
+        },
+        {
+          "number": "751104",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7353 5KG-100MM",
+          "uom": "PCS",
+          "price": 550,
+          "priceInquiry": false
+        },
+        {
+          "number": "751105",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7353 5KG-125MM",
+          "uom": "PCS",
+          "price": 925,
+          "priceInquiry": false
+        },
+        {
+          "number": "751106",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7353 5KG-150MM",
+          "uom": "PCS",
+          "price": 1250,
+          "priceInquiry": false
+        },
+        {
+          "number": "751107",
+          "description": "GLOBE VALVE SCREW DOWN CHECK. C-IRON FLANGED F7353 5KG-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "751108",
+          "description": "GLOBE VALVE SCREW DOWN CHECK. C-IRON FLANGED F7353 5KG-250MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "751109",
+          "description": "GLOBE VALVE SCREW DOWN CHECK. C-IRON FLANGED F7353 5KG-300MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Angle Valve Screw Down Check, C-Iron Flanged F7354 5kg",
+      "categorySlug": "jis-angle-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=1dZ7SLKzrJ_tasFX17AFgXclNGRCJ3mJu",
+      "datasheetUrl": "https://drive.google.com/file/d/14cQGM4bBcTdJKSLPWSa8Tm5OpVP_Ixxu/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751116",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7354 5KG-50MM",
+          "uom": "PCS",
+          "price": 250,
+          "priceInquiry": false
+        },
+        {
+          "number": "751117",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7354 5KG-65MM",
+          "uom": "PCS",
+          "price": 315,
+          "priceInquiry": false
+        },
+        {
+          "number": "751118",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7354 5KG-80MM",
+          "uom": "PCS",
+          "price": 365,
+          "priceInquiry": false
+        },
+        {
+          "number": "751119",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7354 5KG-100MM",
+          "uom": "PCS",
+          "price": 550,
+          "priceInquiry": false
+        },
+        {
+          "number": "751120",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7354 5KG-125MM",
+          "uom": "PCS",
+          "price": 900,
+          "priceInquiry": false
+        },
+        {
+          "number": "751121",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7354 5KG-150MM",
+          "uom": "PCS",
+          "price": 1200,
+          "priceInquiry": false
+        },
+        {
+          "number": "751122",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7354 5KG-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "751123",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7354 5KG-250MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "751124",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7354 5KG-300MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Globe Valve Screw Down Check, C-Iron Flanged F7375 10kg",
+      "categorySlug": "jis-globe-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=1qsBXsxKRqmJVdCgTnOGeQSOa8VRvvV2Z",
+      "datasheetUrl": "https://drive.google.com/file/d/1u8IquEPHRtmkSlmkJi-zfZrc2n4ilDEj/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751131",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7375 10KG-50MM",
+          "uom": "PCS",
+          "price": 275,
+          "priceInquiry": false
+        },
+        {
+          "number": "751132",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7375 10KG-65MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "751133",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7375 10KG-80MM",
+          "uom": "PCS",
+          "price": 425,
+          "priceInquiry": false
+        },
+        {
+          "number": "751134",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7375 10K-100MM",
+          "uom": "PCS",
+          "price": 675,
+          "priceInquiry": false
+        },
+        {
+          "number": "751135",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7375 10K-125MM",
+          "uom": "PCS",
+          "price": 1100,
+          "priceInquiry": false
+        },
+        {
+          "number": "751136",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7375 10K-150MM",
+          "uom": "PCS",
+          "price": 1450,
+          "priceInquiry": false
+        },
+        {
+          "number": "751137",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7375 10K-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Angle Valve Screw Down Check, C-Iron Flanged F7376 10kg",
+      "categorySlug": "jis-angle-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=1dZ7SLKzrJ_tasFX17AFgXclNGRCJ3mJu",
+      "datasheetUrl": "https://drive.google.com/file/d/1wIT7FmuMU3NFEp0zenkv-bZKRiJTp1Vg/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751141",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7376 10KG-50MM",
+          "uom": "PCS",
+          "price": 265,
+          "priceInquiry": false
+        },
+        {
+          "number": "751142",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7376 10KG-65MM",
+          "uom": "PCS",
+          "price": 335,
+          "priceInquiry": false
+        },
+        {
+          "number": "751143",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7376 10KG-80MM",
+          "uom": "PCS",
+          "price": 415,
+          "priceInquiry": false
+        },
+        {
+          "number": "751144",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7376 10K-100MM",
+          "uom": "PCS",
+          "price": 675,
+          "priceInquiry": false
+        },
+        {
+          "number": "751145",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7376 10K-125MM",
+          "uom": "PCS",
+          "price": 1025,
+          "priceInquiry": false
+        },
+        {
+          "number": "751146",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7376 10K-150MM",
+          "uom": "PCS",
+          "price": 1400,
+          "priceInquiry": false
+        },
+        {
+          "number": "751147",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, C-IRON FLANGED F7376 10K-200MM",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Globe Hose Valve Cast-Iron, Flange&Coupling F7333 5kg",
+      "categorySlug": "jis-hose-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS ), Nakajima Coupling : Bronze",
+      "image": "https://drive.google.com/uc?export=view&id=1Cgf42X4cA8eJnz7bjW8f0KlcnCDUx88i",
+      "datasheetUrl": "https://drive.google.com/file/d/1Cgf42X4cA8eJnz7bjW8f0KlcnCDUx88i/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751731",
+          "description": "GLOBE HOSE VALVE CAST-IRON, FLANGE&COUPLING F7333 5KG-50MM",
+          "uom": "PCS",
+          "price": 425,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Globe Hose Valve Cast-Iron, Flange&Coupling F7333 10kg",
+      "categorySlug": "jis-hose-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS ), Nakajima Coupling : Bronze",
+      "image": "https://drive.google.com/uc?export=view&id=1Cgf42X4cA8eJnz7bjW8f0KlcnCDUx88i",
+      "datasheetUrl": "https://drive.google.com/file/d/115QLDFUPoRnVicsbuR9IZW5zp2HgidZj/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751732",
+          "description": "GLOBE HOSE VALVE CAST-IRON, FLANGE&COUPLING F7333 10K-50MM",
+          "uom": "PCS",
+          "price": 525,
+          "priceInquiry": false
+        },
+        {
+          "number": "751733",
+          "description": "GLOBE HOSE VALVE CAST-IRON, FLANGE&COUPLING F7333 10K-65MM",
+          "uom": "PCS",
+          "price": 650,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Angle Hose Valve Cast-Iron, Flange&Coupling F7333 5kg",
+      "categorySlug": "jis-hose-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS ), Nakajima Coupling : Bronze",
+      "image": "https://drive.google.com/uc?export=view&id=11eThJwYMDSQF1y3d-dcNDrXldzniPMtI",
+      "datasheetUrl": "https://drive.google.com/file/d/115QLDFUPoRnVicsbuR9IZW5zp2HgidZj/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751735",
+          "description": "ANGLE HOSE VALVE CAST-IRON, FLANGE&COUPLING F7333 5KG-50MM",
+          "uom": "PCS",
+          "price": 400,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Angle Hose Valve Cast-Iron, Flange&Coupling F7333 10kg",
+      "categorySlug": "jis-hose-valves-cast-iron",
+      "description": "Body : Cast Iron FC200,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS ), Nakajima Coupling : Bronze",
+      "image": "https://drive.google.com/uc?export=view&id=11eThJwYMDSQF1y3d-dcNDrXldzniPMtI",
+      "datasheetUrl": "https://drive.google.com/file/d/115QLDFUPoRnVicsbuR9IZW5zp2HgidZj/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751736",
+          "description": "ANGLE HOSE VALVE CAST-IRON, FLANGE&COUPLING F7333 10K-50MM",
+          "uom": "PCS",
+          "price": 495,
+          "priceInquiry": false
+        },
+        {
+          "number": "751737",
+          "description": "ANGLE HOSE VALVE CAST-IRON, FLANGE&COUPLING F7333 10K-65MM",
+          "uom": "PCS",
+          "price": 625,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Storm Valve Vertical/Horizon, Type W/Handle Svii-Fcd-Rmh",
+      "categorySlug": "jis-storm-valves",
+      "description": "Body : Cast Steel,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=1wS_95VOjwqMi9hdMRv11tG6MMoCdQXTY",
+      "datasheetUrl": "https://drive.google.com/file/d/1pMh_n_ooUw4VPUQwBr8vM3Log-Vhl3tC/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754241",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-50MM, 5K",
+          "uom": "PCS",
+          "price": 550,
+          "priceInquiry": false
+        },
+        {
+          "number": "754242",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-65MM, 5K",
+          "uom": "PCS",
+          "price": 695,
+          "priceInquiry": false
+        },
+        {
+          "number": "754243",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-80MM, 5K",
+          "uom": "PCS",
+          "price": 850,
+          "priceInquiry": false
+        },
+        {
+          "number": "754244",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-100MM, 5K",
+          "uom": "PCS",
+          "price": 1150,
+          "priceInquiry": false
+        },
+        {
+          "number": "754245",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-125MM, 5K",
+          "uom": "PCS",
+          "price": 1350,
+          "priceInquiry": false
+        },
+        {
+          "number": "754246",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-150MM, 5K",
+          "uom": "PCS",
+          "price": 1800,
+          "priceInquiry": false
+        },
+        {
+          "number": "754247",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-200MM, 5K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75424110",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-50MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75424210",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-65MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75424310",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-80MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75424410",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-100MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75424510",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-125MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75424610",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-150MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75424710",
+          "description": "STORM VALVE VERTICAL/HORIZON, TYPE W/HANDLE SVII-FCD-RMH-200MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Storm Valve Angle Type, With Handle Svii-Fcd-A-Rmh",
+      "categorySlug": "jis-storm-valves",
+      "description": "Body : Cast Steel,  DISC / SEAT / STEM : Stainless Steel  ( TRIM : SS )",
+      "image": "https://drive.google.com/uc?export=view&id=19OF-sbrtnDhC0d8gxsM6yP8unYhGo7lE",
+      "datasheetUrl": "https://drive.google.com/file/d/1pMh_n_ooUw4VPUQwBr8vM3Log-Vhl3tC/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "754251",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-50MM, 5K",
+          "uom": "PCS",
+          "price": 525,
+          "priceInquiry": false
+        },
+        {
+          "number": "754252",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-65MM, 5K",
+          "uom": "PCS",
+          "price": 675,
+          "priceInquiry": false
+        },
+        {
+          "number": "754253",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-80MM, 5K",
+          "uom": "PCS",
+          "price": 825,
+          "priceInquiry": false
+        },
+        {
+          "number": "754254",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-100MM, 5K",
+          "uom": "PCS",
+          "price": 1125,
+          "priceInquiry": false
+        },
+        {
+          "number": "754255",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-125MM, 5K",
+          "uom": "PCS",
+          "price": 1300,
+          "priceInquiry": false
+        },
+        {
+          "number": "754256",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-150MM, 5K",
+          "uom": "PCS",
+          "price": 1800,
+          "priceInquiry": false
+        },
+        {
+          "number": "754257",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-200MM, 5K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75425110",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-50MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75425210",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-65MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75425310",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-80MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75425410",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-100MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75425510",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-125MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75425610",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-150MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "75425710",
+          "description": "STORM VALVE ANGLE TYPE, WITH HANDLE SVII-FCD-A-RMH-200MM, 10K",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Air Vent Head Jis 5kg Flanged, Jis Ks91a-121",
+      "categorySlug": "jis-storm-valves",
+      "description": "Body : Cast Iron FC200",
+      "image": "https://drive.google.com/uc?export=view&id=1Jeptu5tlaBejgHoX38-xVTgT65FoL52J",
+      "datasheetUrl": "https://drive.google.com/file/d/17ERRMBOHjj6PjzKR9u1R5YLaE2_v8-Wf/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "5KG50",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 50MM, JIS KS91A-121",
+          "uom": "PCS",
+          "price": 130,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG65",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 65MM, JIS KS91A-121",
+          "uom": "PCS",
+          "price": 150,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG80",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 80MM, JIS KS91A-121",
+          "uom": "PCS",
+          "price": 200,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG100",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 100MM, JIS KS91A-121",
+          "uom": "PCS",
+          "price": 265,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG125",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 125MM, JIS KS91A-121",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG150",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 150MM, JIS KS91A-121",
+          "uom": "PCS",
+          "price": 450,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG200",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 200MM, JIS KS91A-121",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "5KG250",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 250MM, JIS KS91A-121",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "5KG300",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 300MM, JIS KS91A-121",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    },
+    {
+      "name": "Air Vent Head Jis 5kg Flanged, Jis 53-On",
+      "categorySlug": "jis-storm-valves",
+      "description": "Body : Cast Iron FC200",
+      "image": "https://drive.google.com/uc?export=view&id=1J4PrlTgZvpV6eHK10oZ7Y81Efk_R79JW",
+      "datasheetUrl": "https://drive.google.com/file/d/1L6csagZ02cViNfiovVCyoc_wvY0uhJzm/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "5KG50",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 50MM, JIS 53-ON",
+          "uom": "PCS",
+          "price": 150,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG65",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 65MM, JIS 53-ON",
+          "uom": "PCS",
+          "price": 180,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG80",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 80MM, JIS 53-ON",
+          "uom": "PCS",
+          "price": 250,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG100",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 100MM, JIS 53-ON",
+          "uom": "PCS",
+          "price": 300,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG125",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 125MM, JIS 53-ON",
+          "uom": "PCS",
+          "price": 400,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG150",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 150MM, JIS 53-ON",
+          "uom": "PCS",
+          "price": 500,
+          "priceInquiry": false
+        },
+        {
+          "number": "5KG200",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 200MM, JIS 53-ON",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "5KG250",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 250MM, JIS  53-ON",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        },
+        {
+          "number": "5KG300",
+          "description": "AIR VENT HEAD JIS 5KG FLANGED, 300MM, JIS  53-ON",
+          "uom": "PCS",
+          "price": 0,
+          "priceInquiry": true
+        }
+      ]
+    }
+  ]
+}

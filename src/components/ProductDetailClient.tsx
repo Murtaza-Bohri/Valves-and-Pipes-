@@ -29,7 +29,11 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
 
   const selectedImpa = impaEntries.find((entry) => entry.id === selectedImpaId);
   const activePrice = hasImpa ? selectedImpa?.price : product.price;
-  const canPurchase = hasImpa ? Boolean(selectedImpa) : activePrice != null;
+  const hasKnownPrice =
+    activePrice != null && Number.isFinite(activePrice) && activePrice > 0;
+  const canPurchase = hasImpa
+    ? Boolean(selectedImpa) && hasKnownPrice
+    : hasKnownPrice;
 
   const addToCart = () => {
     if (!product.id || !canPurchase) return;

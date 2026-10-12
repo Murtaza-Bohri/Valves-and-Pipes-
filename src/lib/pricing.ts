@@ -113,13 +113,21 @@ export async function resolveCartPrice(
       return { error: "Invalid IMPA selection." };
     }
 
+    const unitPrice = Number(impa.price);
+    if (!Number.isFinite(unitPrice) || unitPrice <= 0) {
+      return {
+        error:
+          "This size is priced on inquiry. Please contact us or use WhatsApp to order.",
+      };
+    }
+
     return {
       productId: product.id,
       impaId: impa.id,
       impaNumber: impa.impa_number,
       itemDescription: impa.item_description,
       inventoryUom: impa.inventory_uom,
-      price: Number(impa.price),
+      price: unitPrice,
       productName: product.name,
       imageUrl: product.main_image,
     };

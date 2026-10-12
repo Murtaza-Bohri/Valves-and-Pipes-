@@ -98,6 +98,9 @@ export function setProductCategory(category: ProductCategory) {
 }
 
 export function formatPrice(amount: number) {
+  if (!Number.isFinite(amount) || amount <= 0) {
+    return "Price on inquiry";
+  }
   return `AED ${amount.toFixed(2)}`;
 }
 
