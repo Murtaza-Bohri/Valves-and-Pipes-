@@ -36,7 +36,7 @@ function drivePreviewHtml(fileId: string) {
 </html>`;
 }
 
-function drivePreviewResponse(fileId: string) {
+export function drivePreviewResponse(fileId: string) {
   return new Response(drivePreviewHtml(fileId), {
     status: 200,
     headers: {
@@ -45,6 +45,25 @@ function drivePreviewResponse(fileId: string) {
       "Cache-Control": "public, max-age=300",
     },
   });
+}
+
+export async function drivePdfAvailable(fileId: string): Promise<boolean> {
+  const candidates = [
+    `https://drive.usercontent.google.com/download?id=${fileId}&export=download&confirm=t`,
+    `https://drive.google.com/uc?export=download&id=${fileId}&confirm=t`,
+    `https://drive.google.com/uc?export=view&id=${fileId}`,
+  ];
+
+  for (const url of candidates) {
+    const response = await fetch(url, { redirect: "follow" });
+    if (!response.ok) continue;
+    const contentType = response.headers.get("content-type") ?? "";
+    if (contentType.includes("text/html")) continue;
+    const buffer = await response.arrayBuffer();
+    if (buffer.byteLength > 500) return true;
+  }
+
+  return false;
 }
 
 async function fetchGoogleDrivePdf(fileId: string): Promise<Response> {
@@ -101,8 +120,8 @@ async function fetchRemotePdf(url: string): Promise<Response> {
   });
 }
 
-/** Fetches a PDF for in-browser viewing (same-origin iframe). */
-export async function fetchDatasheetForEmbed(sourceUrl: string): Promise<Response> {
+/** Raw PDF bytes for PDF.js (never open this URL directly in the browser). */
+export async function fetchDatasheetPdfFile(sourceUrl: string): Promise<Response> {
   const trimmed = sourceUrl.trim();
   if (!isAllowedDatasheetSource(trimmed)) {
     return new Response("Invalid datasheet source.", { status: 400 });

@@ -1,8 +1,12 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import { useCallback, useEffect, useId, useState } from "react";
 import { X } from "lucide-react";
-import { resolveDatasheetEmbedUrl } from "@/lib/image-url";
+import { ProductDatasheetPdfViewer } from "@/components/ProductDatasheetPdfViewer";
+import {
+  extractGoogleDriveFileId,
+  resolveDatasheetEmbedUrl,
+} from "@/lib/image-url";
 
 type ProductDatasheetModalProps = {
   open: boolean;
@@ -20,9 +24,22 @@ export function ProductDatasheetModal({
 }: ProductDatasheetModalProps) {
   const titleId = useId();
   const [loading, setLoading] = useState(true);
+  const [useDrivePreview, setUseDrivePreview] = useState(false);
   const [loadError, setLoadError] = useState(false);
 
-  const embedUrl = resolveDatasheetEmbedUrl(fileUrl);
+  const previewEmbedUrl = resolveDatasheetEmbedUrl(fileUrl);
+  const drivePreviewUrl = `/api/datasheet/view?src=${encodeURIComponent(fileUrl)}&fallback=preview`;
+
+  const handlePdfReady = useCallback(() => setLoading(false), []);
+  const handlePdfError = useCallback(() => {
+    if (extractGoogleDriveFileId(fileUrl)) {
+      setUseDrivePreview(true);
+      setLoading(true);
+      return;
+    }
+    setLoadError(true);
+    setLoading(false);
+  }, [fileUrl]);
 
   useEffect(() => {
     if (!open) return;
@@ -35,17 +52,16 @@ export function ProductDatasheetModal({
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKeyDown);
     setLoading(true);
+    setUseDrivePreview(false);
     setLoadError(false);
-    const loadingTimer = window.setTimeout(() => setLoading(false), 8000);
 
     return () => {
-      clearTimeout(loadingTimer);
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [open, onClose, fileUrl]);
 
-  if (!open || !embedUrl) return null;
+  if (!open || !previewEmbedUrl) return null;
 
   return (
     <div
@@ -82,7 +98,7 @@ export function ProductDatasheetModal({
         </div>
 
         <div className="relative min-h-0 flex-1 bg-[#525659]">
-          {loading && !loadError ? (
+          {loading ? (
             <p className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-[#f7f7f7] text-sm text-[#6b6b6b]">
               Loading data sheet…
             </p>
@@ -90,27 +106,28 @@ export function ProductDatasheetModal({
 
           {loadError ? (
             <p className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-[#f7f7f7] px-6 text-center text-sm text-[#6b6b6b]">
-              <span>Could not display this data sheet in the viewer.</span>
+              <span>Could not display this data sheet.</span>
               <span className="text-xs">
-                The file may be private on Google Drive or unavailable. Contact us for a copy.
+                If this product uses Google Drive, set the file to &quot;Anyone with the link&quot; or run{" "}
+                <code className="text-[#141414]">npm run media:mirror</code>.
               </span>
             </p>
-          ) : (
+          ) : useDrivePreview ? (
             <iframe
-              key={embedUrl}
+              key={drivePreviewUrl}
               title={`${title} datasheet`}
-              src={embedUrl}
+              src={drivePreviewUrl}
               className="h-full w-full min-h-[70vh] border-0 bg-white"
+              sandbox="allow-scripts allow-same-origin allow-popups"
               allow="fullscreen"
               referrerPolicy="no-referrer-when-downgrade"
-              onLoad={() => {
-                setLoading(false);
-                setLoadError(false);
-              }}
-              onError={() => {
-                setLoading(false);
-                setLoadError(true);
-              }}
+              onLoad={() => setLoading(false)}
+            />
+          ) : (
+            <ProductDatasheetPdfViewer
+              fileUrl={fileUrl}
+              onReady={handlePdfReady}
+              onError={handlePdfError}
             />
           )}
         </div>

@@ -20,7 +20,8 @@
     "db:migrate": "node scripts/apply-migration.mjs",
     "db:datasheet-column": "node scripts/apply-sql-file.mjs supabase/sql/14_product_datasheet_url.sql",
     "media:mirror": "node scripts/mirror-product-media.mjs",
-    "media:optimize": "node scripts/mirror-product-media.mjs"
+    "media:optimize": "node scripts/mirror-product-media.mjs",
+    "postinstall": "node scripts/copy-pdf-worker.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -33,6 +34,7 @@
     "lucide-react": "^0.575.0",
     "motion": "^12.34.3",
     "next": "16.2.12",
+    "pdfjs-dist": "^4.10.38",
     "pg": "^8.23.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
