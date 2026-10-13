@@ -50,7 +50,8 @@ async function fetchDriveBinary(sourceUrl, kind) {
       );
     } else {
       candidates.push(
-        `https://drive.google.com/uc?export=download&id=${driveId}`,
+        `https://drive.usercontent.google.com/download?id=${driveId}&export=download&confirm=t`,
+        `https://drive.google.com/uc?export=download&id=${driveId}&confirm=t`,
         `https://drive.google.com/uc?export=view&id=${driveId}`
       );
     }

@@ -57,14 +57,18 @@ for (const product of products ?? []) {
         isSupabaseStoragePublicUrl(mainImage));
 
   if (shouldMirrorImage) {
-    const stored = await mirrorProductMediaToStorage(supabase, supabaseUrl, {
-      productSlug: product.slug,
-      sourceUrl: mainImage,
-      kind: "image",
-    });
-    if (stored && stored !== mainImage) {
-      mainImage = stored;
-      changed = true;
+    try {
+      const stored = await mirrorProductMediaToStorage(supabase, supabaseUrl, {
+        productSlug: product.slug,
+        sourceUrl: mainImage,
+        kind: "image",
+      });
+      if (stored && stored !== mainImage) {
+        mainImage = stored;
+        changed = true;
+      }
+    } catch (mirrorError) {
+      console.warn(`  Image skip "${product.name}": ${mirrorError.message}`);
     }
   }
 
@@ -74,14 +78,18 @@ for (const product of products ?? []) {
     !isSupabaseStoragePublicUrl(datasheetUrl) &&
     isRemoteMediaUrl(datasheetUrl)
   ) {
-    const stored = await mirrorProductMediaToStorage(supabase, supabaseUrl, {
-      productSlug: product.slug,
-      sourceUrl: datasheetUrl,
-      kind: "datasheet",
-    });
-    if (stored && stored !== datasheetUrl) {
-      datasheetUrl = stored;
-      changed = true;
+    try {
+      const stored = await mirrorProductMediaToStorage(supabase, supabaseUrl, {
+        productSlug: product.slug,
+        sourceUrl: datasheetUrl,
+        kind: "datasheet",
+      });
+      if (stored && stored !== datasheetUrl) {
+        datasheetUrl = stored;
+        changed = true;
+      }
+    } catch (mirrorError) {
+      console.warn(`  Datasheet skip "${product.name}": ${mirrorError.message}`);
     }
   }
 

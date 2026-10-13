@@ -38,8 +38,7 @@ function isPdfUrl(url: string) {
 }
 
 /**
- * URL for in-modal viewing (no download). Drive uses Google preview;
- * hosted PDFs use Google Docs viewer embed.
+ * Same-origin URL for in-modal PDF viewing (proxied; no Drive redirect or download).
  */
 export function resolveDatasheetEmbedUrl(
   url: string | null | undefined
@@ -47,11 +46,22 @@ export function resolveDatasheetEmbedUrl(
   const trimmed = String(url ?? "").trim();
   if (!trimmed) return null;
 
-  const drivePreview = resolveGoogleDrivePreviewUrl(trimmed);
-  if (drivePreview) return drivePreview;
+  if (trimmed.startsWith("/api/datasheet/view")) {
+    return trimmed;
+  }
 
-  if (/^https?:\/\//i.test(trimmed) && (isPdfUrl(trimmed) || isSupabaseStoragePublicUrl(trimmed))) {
-    return `https://docs.google.com/gview?url=${encodeURIComponent(trimmed)}&embedded=true`;
+  const driveId = extractGoogleDriveFileId(trimmed);
+  if (
+    driveId ||
+    isSupabaseStoragePublicUrl(trimmed) ||
+    isPdfUrl(trimmed) ||
+    /drive\.google\.com/i.test(trimmed)
+  ) {
+    return `/api/datasheet/view?src=${encodeURIComponent(trimmed)}`;
+  }
+
+  if (/^https?:\/\//i.test(trimmed)) {
+    return `/api/datasheet/view?src=${encodeURIComponent(trimmed)}`;
   }
 
   return trimmed;

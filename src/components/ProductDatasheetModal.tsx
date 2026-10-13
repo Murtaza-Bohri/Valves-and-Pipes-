@@ -20,6 +20,7 @@ export function ProductDatasheetModal({
 }: ProductDatasheetModalProps) {
   const titleId = useId();
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
 
   const embedUrl = resolveDatasheetEmbedUrl(fileUrl);
 
@@ -34,7 +35,8 @@ export function ProductDatasheetModal({
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKeyDown);
     setLoading(true);
-    const loadingTimer = window.setTimeout(() => setLoading(false), 4000);
+    setLoadError(false);
+    const loadingTimer = window.setTimeout(() => setLoading(false), 8000);
 
     return () => {
       clearTimeout(loadingTimer);
@@ -80,21 +82,37 @@ export function ProductDatasheetModal({
         </div>
 
         <div className="relative min-h-0 flex-1 bg-[#525659]">
-          {loading ? (
+          {loading && !loadError ? (
             <p className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-[#f7f7f7] text-sm text-[#6b6b6b]">
               Loading data sheet…
             </p>
           ) : null}
 
-          <iframe
-            key={embedUrl}
-            title={`${title} datasheet`}
-            src={embedUrl}
-            className="h-full w-full min-h-[70vh] border-0 bg-white"
-            allow="fullscreen"
-            referrerPolicy="no-referrer-when-downgrade"
-            onLoad={() => setLoading(false)}
-          />
+          {loadError ? (
+            <p className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-[#f7f7f7] px-6 text-center text-sm text-[#6b6b6b]">
+              <span>Could not display this data sheet in the viewer.</span>
+              <span className="text-xs">
+                The file may be private on Google Drive or unavailable. Contact us for a copy.
+              </span>
+            </p>
+          ) : (
+            <iframe
+              key={embedUrl}
+              title={`${title} datasheet`}
+              src={embedUrl}
+              className="h-full w-full min-h-[70vh] border-0 bg-white"
+              allow="fullscreen"
+              referrerPolicy="no-referrer-when-downgrade"
+              onLoad={() => {
+                setLoading(false);
+                setLoadError(false);
+              }}
+              onError={() => {
+                setLoading(false);
+                setLoadError(true);
+              }}
+            />
+          )}
         </div>
       </div>
     </div>

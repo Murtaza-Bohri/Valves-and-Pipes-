@@ -150,11 +150,12 @@ function inferMaterial(description, technical) {
 function inferValveFamily(description) {
   const d = description.toUpperCase();
   if (/AIR\s+VENT/.test(d)) return "storm";
+  if (/SCREW\s+DOWN\s+CHECK/.test(d)) return "storm";
   if (/GATE\s+VALVE/.test(d)) return "gate";
   if (/GLOBE\s+VALVE/.test(d)) return "globe";
   if (/ANGLE\s+VALVE/.test(d)) return "angle";
   if (/HOSE/.test(d)) return "hose";
-  if (/CHECK|STORM|SCREW\s+DOWN\s+CHECK/.test(d)) return "storm";
+  if (/CHECK|STORM/.test(d)) return "storm";
   return "gate";
 }
 

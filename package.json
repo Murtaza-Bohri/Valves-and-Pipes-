@@ -15,6 +15,8 @@
     "seed:butterfly:export": "node scripts/import-butterfly-valves.mjs --export-only",
     "seed:jis-ci": "node scripts/import-jis-ci-valves.mjs",
     "seed:jis-ci:export": "node scripts/import-jis-ci-valves.mjs --export-only",
+    "seed:jis-bronze": "node scripts/import-jis-bronze-valves.mjs",
+    "seed:jis-bronze:export": "node scripts/import-jis-bronze-valves.mjs --export-only",
     "db:migrate": "node scripts/apply-migration.mjs",
     "db:datasheet-column": "node scripts/apply-sql-file.mjs supabase/sql/14_product_datasheet_url.sql",
     "media:mirror": "node scripts/mirror-product-media.mjs",

@@ -1,0 +1,750 @@
+{
+  "sourceFile": "C:\\Users\\hussain\\Desktop\\himmat-oil-fields\\data\\Product List_Bronze Valve_JIS.xlsx",
+  "defaultImage": "/products/valves.png",
+  "products": [
+    {
+      "name": "Globe Valve Bronze Flanged-End, F7301 5kg",
+      "categorySlug": "jis-globe-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1MOPA_NS3YNaaaHab41PJlSAeic-qhi-v",
+      "datasheetUrl": "https://drive.google.com/file/d/1wJL-UHg9dVPGlO0MDBX-xxtB8UTWFPs9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750121",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7301 5KG-15MM",
+          "uom": "PCS",
+          "price": 220,
+          "priceInquiry": false
+        },
+        {
+          "number": "750122",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7301 5KG-20MM",
+          "uom": "PCS",
+          "price": 270,
+          "priceInquiry": false
+        },
+        {
+          "number": "750123",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7301 5KG-25MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "750124",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7301 5KG-32MM",
+          "uom": "PCS",
+          "price": 525,
+          "priceInquiry": false
+        },
+        {
+          "number": "750125",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7301 5KG-40MM",
+          "uom": "PCS",
+          "price": 650,
+          "priceInquiry": false
+        },
+        {
+          "number": "750126",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7301 5KG-50MM",
+          "uom": "PCS",
+          "price": 1300,
+          "priceInquiry": false
+        },
+        {
+          "number": "750127",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7301 5KG-65MM",
+          "uom": "PCS",
+          "price": 1550,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Globe Valve Bronze Flanged-End, F7303 16kg",
+      "categorySlug": "jis-globe-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1MOPA_NS3YNaaaHab41PJlSAeic-qhi-v",
+      "datasheetUrl": "https://drive.google.com/file/d/1wJL-UHg9dVPGlO0MDBX-xxtB8UTWFPs9/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750141",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7303 16KG-15MM",
+          "uom": "PCS",
+          "price": 275,
+          "priceInquiry": false
+        },
+        {
+          "number": "750142",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7303 16KG-20MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "750143",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7303 16KG-25MM",
+          "uom": "PCS",
+          "price": 500,
+          "priceInquiry": false
+        },
+        {
+          "number": "750144",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7303 16KG-32MM",
+          "uom": "PCS",
+          "price": 650,
+          "priceInquiry": false
+        },
+        {
+          "number": "750145",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, F7303 16KG-40MM",
+          "uom": "PCS",
+          "price": 750,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Angle Valve Bronze Flanged-End, F7302 5kg",
+      "categorySlug": "jis-angle-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1SAgPRSt-nyHzNv6glPTZYtH3aXqQqwE_",
+      "datasheetUrl": "https://drive.google.com/file/d/1y-T_bToEJUgXj2ePkSg1ezfCX2UtrNvg/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750131",
+          "description": "ANGLE VALVE BRONZE FLANGED-END, F7302 5KG-15MM",
+          "uom": "PCS",
+          "price": 200,
+          "priceInquiry": false
+        },
+        {
+          "number": "750132",
+          "description": "ANGLE VALVE BRONZE FLANGED-END, F7302 5KG-20MM",
+          "uom": "PCS",
+          "price": 265,
+          "priceInquiry": false
+        },
+        {
+          "number": "750133",
+          "description": "ANGLE VALVE BRONZE FLANGED-END. F7302 5KG-25MM",
+          "uom": "PCS",
+          "price": 400,
+          "priceInquiry": false
+        },
+        {
+          "number": "750134",
+          "description": "ANGLE VALVE BRONZE FLANGED-END. F7302 5KG-32MM",
+          "uom": "PCS",
+          "price": 525,
+          "priceInquiry": false
+        },
+        {
+          "number": "750135",
+          "description": "ANGLE VALVE BRONZE FLANGED-END. F7302 5KG-40MM",
+          "uom": "PCS",
+          "price": 700,
+          "priceInquiry": false
+        },
+        {
+          "number": "750136",
+          "description": "ANGLE VALVE BRONZE FLANGED-END. F7302 5KG-50MM",
+          "uom": "PCS",
+          "price": 1350,
+          "priceInquiry": false
+        },
+        {
+          "number": "750137",
+          "description": "ANGLE VALVE BRONZE FLANGED-END. F7302 5KG-65MM",
+          "uom": "PCS",
+          "price": 1550,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Angle Valve Bronze Flanged-End, F7304 16kg",
+      "categorySlug": "jis-angle-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1SAgPRSt-nyHzNv6glPTZYtH3aXqQqwE_",
+      "datasheetUrl": "https://drive.google.com/file/d/1y-T_bToEJUgXj2ePkSg1ezfCX2UtrNvg/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "750151",
+          "description": "ANGLE VALVE BRONZE FLANGED-END, F7304 16KG-15MM",
+          "uom": "PCS",
+          "price": 275,
+          "priceInquiry": false
+        },
+        {
+          "number": "750152",
+          "description": "ANGLE VALVE BRONZE FLANGED-END, F7304 16KG-20MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "750153",
+          "description": "ANGLE VALVE BRONZE FLANGED-END. F7304 16KG-25MM",
+          "uom": "PCS",
+          "price": 525,
+          "priceInquiry": false
+        },
+        {
+          "number": "750154",
+          "description": "ANGLE VALVE BRONZE FLANGED-END. F7304 16KG-32MM",
+          "uom": "PCS",
+          "price": 650,
+          "priceInquiry": false
+        },
+        {
+          "number": "750155",
+          "description": "ANGLE VALVE BRONZE FLANGED-END. F7304 16KG-40MM",
+          "uom": "PCS",
+          "price": 775,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Globe Valve Bronze Flanged-End, Union Bonnet F7346 5kg",
+      "categorySlug": "jis-globe-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1YUUvjr7qaCM7DjQUH45IT_8KRLlHE41A",
+      "datasheetUrl": null,
+      "impa": [
+        {
+          "number": "750501",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7346 5KG-15MM",
+          "uom": "PCS",
+          "price": 250,
+          "priceInquiry": false
+        },
+        {
+          "number": "750502",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7346 5KG-20MM",
+          "uom": "PCS",
+          "price": 325,
+          "priceInquiry": false
+        },
+        {
+          "number": "750503",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7346 5KG-25MM",
+          "uom": "PCS",
+          "price": 450,
+          "priceInquiry": false
+        },
+        {
+          "number": "750504",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7346 5KG-32MM",
+          "uom": "PCS",
+          "price": 600,
+          "priceInquiry": false
+        },
+        {
+          "number": "750505",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7346 5KG-40MM",
+          "uom": "PCS",
+          "price": 700,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Globe Valve Bronze Flanged-End, Union Bonnet F7348 16kg",
+      "categorySlug": "jis-globe-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1YUUvjr7qaCM7DjQUH45IT_8KRLlHE41A",
+      "datasheetUrl": null,
+      "impa": [
+        {
+          "number": "750521",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7348 16KG-15MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "750522",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7348 16KG-20MM",
+          "uom": "PCS",
+          "price": 425,
+          "priceInquiry": false
+        },
+        {
+          "number": "750523",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7348 16KG-25MM",
+          "uom": "PCS",
+          "price": 550,
+          "priceInquiry": false
+        },
+        {
+          "number": "750524",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7348 16KG-32MM",
+          "uom": "PCS",
+          "price": 650,
+          "priceInquiry": false
+        },
+        {
+          "number": "750525",
+          "description": "GLOBE VALVE BRONZE FLANGED-END, UNION BONNET F7348 16KG-40MM",
+          "uom": "PCS",
+          "price": 800,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Gate Valve Bronze Flanged-End, Rising-Stem F7367 5kg",
+      "categorySlug": "jis-gate-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1k8GkXblhbNvFTrpQ_NWZ7JNjlPtPv7ET",
+      "datasheetUrl": null,
+      "impa": [
+        {
+          "number": "750951",
+          "description": "GATE VALVE BRONZE FLANGED-END, RISING-STEM F7367 5KG-15MM",
+          "uom": "PCS",
+          "price": 300,
+          "priceInquiry": false
+        },
+        {
+          "number": "750952",
+          "description": "GATE VALVE BRONZE FLANGED-END, RISING-STEM F7367 5KG-20MM",
+          "uom": "PCS",
+          "price": 375,
+          "priceInquiry": false
+        },
+        {
+          "number": "750953",
+          "description": "GATE VALVE BRONZE FLANGED-END, RISING-STEM F7367 5KG-25MM",
+          "uom": "PCS",
+          "price": 450,
+          "priceInquiry": false
+        },
+        {
+          "number": "750954",
+          "description": "GATE VALVE BRONZE FLANGED-END. RISING-STEM F7367 5KG-32MM",
+          "uom": "PCS",
+          "price": 650,
+          "priceInquiry": false
+        },
+        {
+          "number": "750955",
+          "description": "GATE VALVE BRONZE FLANGED-END. RISING-STEM F7367 5KG-40MM",
+          "uom": "PCS",
+          "price": 800,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Gate Valve Bronze Flanged-End, Rising-Stem F7368 10kg",
+      "categorySlug": "jis-gate-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1k8GkXblhbNvFTrpQ_NWZ7JNjlPtPv7ET",
+      "datasheetUrl": null,
+      "impa": [
+        {
+          "number": "750961",
+          "description": "GATE VALVE BRONZE FLANGED-END, RISING-STEM F7368 10KG-15MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "750962",
+          "description": "GATE VALVE BRONZE FLANGED-END, RISING-STEM F7368 10KG-20MM",
+          "uom": "PCS",
+          "price": 450,
+          "priceInquiry": false
+        },
+        {
+          "number": "750963",
+          "description": "GATE VALVE BRONZE FLANGED-END, RISING-STEM F7368 10KG-25MM",
+          "uom": "PCS",
+          "price": 650,
+          "priceInquiry": false
+        },
+        {
+          "number": "750964",
+          "description": "GATE VALVE BRONZE FLANGED-END, RISING-STEM F7368 10KG-32MM",
+          "uom": "PCS",
+          "price": 800,
+          "priceInquiry": false
+        },
+        {
+          "number": "750965",
+          "description": "GATE VALVE BRONZE FLANGED-END, RISING-STEM F7368 10KG-40MM",
+          "uom": "PCS",
+          "price": 950,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Globe Valve Screw Down Check, Bronze Flanged F7351 5kg",
+      "categorySlug": "jis-storm-valves",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=17L2xpRT_I796qCHlJCgiW9CRGl59qRwt",
+      "datasheetUrl": "https://drive.google.com/file/d/1O3OlqI4qE7bbXjvIMPs8DRYh8zJQ0f6I/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751051",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7351 5KG-15MM",
+          "uom": "PCS",
+          "price": 215,
+          "priceInquiry": false
+        },
+        {
+          "number": "751052",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7351 5KG-20MM",
+          "uom": "PCS",
+          "price": 290,
+          "priceInquiry": false
+        },
+        {
+          "number": "751053",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7351 5KG-25MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "751054",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7351 5KG-32MM",
+          "uom": "PCS",
+          "price": 500,
+          "priceInquiry": false
+        },
+        {
+          "number": "751055",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7351 5KG-40MM",
+          "uom": "PCS",
+          "price": 650,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Angle Valve Screw Down Check, Bronze Flanged F7352 5kg",
+      "categorySlug": "jis-storm-valves",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1Gd_mZtJ3XxG2Pm2jZ1J9huyfxynE_PIh",
+      "datasheetUrl": "https://drive.google.com/file/d/1fQ3DWfJGsb5Co2nJJWYWZllPPrmZKJ4c/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751061",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7352 5KG-15MM",
+          "uom": "PCS",
+          "price": 210,
+          "priceInquiry": false
+        },
+        {
+          "number": "751062",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7352 5KG-20MM",
+          "uom": "PCS",
+          "price": 280,
+          "priceInquiry": false
+        },
+        {
+          "number": "751063",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7352 5KG-25MM",
+          "uom": "PCS",
+          "price": 400,
+          "priceInquiry": false
+        },
+        {
+          "number": "751064",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7352 5KG-32MM",
+          "uom": "PCS",
+          "price": 500,
+          "priceInquiry": false
+        },
+        {
+          "number": "751065",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7352 5KG-40MM",
+          "uom": "PCS",
+          "price": 660,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Globe Valve Screw Down Check, Bronze Flanged F7409 16kg",
+      "categorySlug": "jis-storm-valves",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=17L2xpRT_I796qCHlJCgiW9CRGl59qRwt",
+      "datasheetUrl": "https://drive.google.com/file/d/1O3OlqI4qE7bbXjvIMPs8DRYh8zJQ0f6I/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751071",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7409 16KG-15MM",
+          "uom": "PCS",
+          "price": 290,
+          "priceInquiry": false
+        },
+        {
+          "number": "751072",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7409 16KG-20MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "751073",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7409 16KG-25MM",
+          "uom": "PCS",
+          "price": 500,
+          "priceInquiry": false
+        },
+        {
+          "number": "751074",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7409 16KG-32MM",
+          "uom": "PCS",
+          "price": 600,
+          "priceInquiry": false
+        },
+        {
+          "number": "751075",
+          "description": "GLOBE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7409 16KG-40MM",
+          "uom": "PCS",
+          "price": 725,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Angle Valve Screw Down Check, Bronze Flanged F7410 16kg",
+      "categorySlug": "jis-storm-valves",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1Gd_mZtJ3XxG2Pm2jZ1J9huyfxynE_PIh",
+      "datasheetUrl": "https://drive.google.com/file/d/1fQ3DWfJGsb5Co2nJJWYWZllPPrmZKJ4c/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751081",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7410 16KG-15MM",
+          "uom": "PCS",
+          "price": 290,
+          "priceInquiry": false
+        },
+        {
+          "number": "751082",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7410 16KG-20MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "751083",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7410 16KG-25MM",
+          "uom": "PCS",
+          "price": 525,
+          "priceInquiry": false
+        },
+        {
+          "number": "751084",
+          "description": "ANGLE VALVE SCREW DOWN CHECK, BRONZE FLANGED F7410 16KG-32MM",
+          "uom": "PCS",
+          "price": 625,
+          "priceInquiry": false
+        },
+        {
+          "number": "751085",
+          "description": "ANGLE VALVE SCREW DOWN CHECK. BRONZE FLANGED F7410 16KG-40MM",
+          "uom": "PCS",
+          "price": 790,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Globe Hose Valve Bronze, Flange&Screw F7334 5kg",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1-SXJRA1_pteu7F1K46R8H6aC-jZ3Wk0L",
+      "datasheetUrl": "https://drive.google.com/file/d/1znI4gT3s7tbAqF0xhoB9KRqaT19vuMkM/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751701",
+          "description": "GLOBE HOSE VALVE BRONZE, FLANGE&SCREW F7334 5KG-15MM",
+          "uom": "PCS",
+          "price": 250,
+          "priceInquiry": false
+        },
+        {
+          "number": "751703",
+          "description": "GLOBE HOSE VALVE BRONZE, FLANGE&SCREW F7334 5KG-25MM",
+          "uom": "PCS",
+          "price": 400,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Globe Hose Valve Bronze, Flange&Screw F7334 10kg",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1-SXJRA1_pteu7F1K46R8H6aC-jZ3Wk0L",
+      "datasheetUrl": "https://drive.google.com/file/d/1znI4gT3s7tbAqF0xhoB9KRqaT19vuMkM/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751702",
+          "description": "GLOBE HOSE VALVE BRONZE, FLANGE&SCREW F7334 10KG-15MM",
+          "uom": "PCS",
+          "price": 350,
+          "priceInquiry": false
+        },
+        {
+          "number": "751704",
+          "description": "GLOBE HOSE VALVE BRONZE, FLANGE&SCREW F7334 10KG-25MM",
+          "uom": "PCS",
+          "price": 475,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Angle Hose Valve Bronze, Flange&Screw F7334 5kg",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=10_c_d8W777ehAXSMVAsqlnM0qZouhF8K",
+      "datasheetUrl": "https://drive.google.com/file/d/1e_6AMy_7eNXHnbQJJ6-t1xCzxI0793X2/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751706",
+          "description": "ANGLE HOSE VALVE BRONZE, FLANGE&SCREW F7334 5KG-15MM",
+          "uom": "PCS",
+          "price": 250,
+          "priceInquiry": false
+        },
+        {
+          "number": "751708",
+          "description": "ANGLE HOSE VALVE BRONZE, FLANGE&SCREW F7334 5KG-25MM",
+          "uom": "PCS",
+          "price": 400,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Angle Hose Valve Bronze, Flange&Screw F7334 10kg",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=10_c_d8W777ehAXSMVAsqlnM0qZouhF8K",
+      "datasheetUrl": "https://drive.google.com/file/d/1e_6AMy_7eNXHnbQJJ6-t1xCzxI0793X2/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751707",
+          "description": "ANGLE HOSE VALVE BRONZE, FLANGE&SCREW F7334 10KG-15MM",
+          "uom": "PCS",
+          "price": 325,
+          "priceInquiry": false
+        },
+        {
+          "number": "751709",
+          "description": "ANGLE HOSE VALVE BRONZE, FLANGE&SCREW F7334 10KG-25MM",
+          "uom": "PCS",
+          "price": 475,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Bronze Globe  Hose Valve F7334a , Flange&Coupling , 10k 40mm, Nakajima Coupling",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1fbWlLn6CZO3nuHnKQXI72a1CNSHMjlEc",
+      "datasheetUrl": "https://drive.google.com/file/d/1znI4gT3s7tbAqF0xhoB9KRqaT19vuMkM/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751712",
+          "description": "BRONZE GLOBE  HOSE VALVE F7334A , FLANGE&COUPLING , 10K 40MM, NAKAJIMA COUPLING",
+          "uom": "PCS",
+          "price": 950,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Bronze Angle Hose Valve F7334b , Flange&Coupling , 10k 40mm, Nakajima Coupling",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1x7OnGleIbKZgsG3SNh9C3kP8Vv9z71df",
+      "datasheetUrl": "https://drive.google.com/file/d/1e_6AMy_7eNXHnbQJJ6-t1xCzxI0793X2/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751714",
+          "description": "BRONZE ANGLE HOSE VALVE F7334B , FLANGE&COUPLING , 10K 40MM, NAKAJIMA COUPLING",
+          "uom": "PCS",
+          "price": 1050,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Bronze Globe  Hose Valve F7334a , Flange&Coupling , 10k 50mm, Nakajima Coupling",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1fbWlLn6CZO3nuHnKQXI72a1CNSHMjlEc",
+      "datasheetUrl": "https://drive.google.com/file/d/1znI4gT3s7tbAqF0xhoB9KRqaT19vuMkM/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751717",
+          "description": "BRONZE GLOBE  HOSE VALVE F7334A , FLANGE&COUPLING , 10K 50MM, NAKAJIMA COUPLING",
+          "uom": "PCS",
+          "price": 1900,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Bronze Globe  Hose Valve F7334a , Flange&Coupling , 10k 65mm, Nakajima Coupling",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1fbWlLn6CZO3nuHnKQXI72a1CNSHMjlEc",
+      "datasheetUrl": "https://drive.google.com/file/d/1znI4gT3s7tbAqF0xhoB9KRqaT19vuMkM/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751718",
+          "description": "BRONZE GLOBE  HOSE VALVE F7334A , FLANGE&COUPLING , 10K 65MM, NAKAJIMA COUPLING",
+          "uom": "PCS",
+          "price": 2200,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Bronze Angle Hose Valve F7334b , Flange&Coupling , 10k 50mm, Nakajima Coupling",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1x7OnGleIbKZgsG3SNh9C3kP8Vv9z71df",
+      "datasheetUrl": "https://drive.google.com/file/d/1e_6AMy_7eNXHnbQJJ6-t1xCzxI0793X2/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751722",
+          "description": "BRONZE ANGLE HOSE VALVE F7334B , FLANGE&COUPLING , 10K 50MM, NAKAJIMA COUPLING",
+          "uom": "PCS",
+          "price": 2300,
+          "priceInquiry": false
+        }
+      ]
+    },
+    {
+      "name": "Bronze Angle Hose Valve F7334b , Flange&Coupling , 10k 65mm, Nakajima Coupling",
+      "categorySlug": "jis-hose-valves-bronze",
+      "description": "",
+      "image": "https://drive.google.com/uc?export=view&id=1x7OnGleIbKZgsG3SNh9C3kP8Vv9z71df",
+      "datasheetUrl": "https://drive.google.com/file/d/1e_6AMy_7eNXHnbQJJ6-t1xCzxI0793X2/view?usp=drive_link",
+      "impa": [
+        {
+          "number": "751723",
+          "description": "BRONZE ANGLE HOSE VALVE F7334B , FLANGE&COUPLING , 10K 65MM, NAKAJIMA COUPLING",
+          "uom": "PCS",
+          "price": 2500,
+          "priceInquiry": false
+        }
+      ]
+    }
+  ]
+}
