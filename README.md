@@ -47,6 +47,23 @@ public/
 2. Copy URL and anon key into `.env.local`
 3. Use `supabase` from `@/lib/supabase/client` in client components, or `createSupabaseServerClient()` on the server
 
+## Ziina payments
+
+Checkout creates an order, then opens Ziina’s hosted payment page when configured.
+
+Add to `.env.local` (server-only except site URL):
+
+| Variable | Purpose |
+| --- | --- |
+| `ZIINA_ACCESS_TOKEN` | Bearer token from [Ziina developer docs](https://docs.ziina.com/developers/custom-integration) |
+| `ZIINA_WEBHOOK_SECRET` | Optional HMAC secret when registering your webhook |
+| `ZIINA_TEST_MODE` | Set to `true` for test payment intents (no real charge) |
+| `NEXT_PUBLIC_SITE_URL` | Public site URL for success/cancel redirects (e.g. `https://yourdomain.com`) |
+
+1. Apply migration `supabase/migrations/002_ziina_payments.sql` to your database.
+2. Register webhook URL: `https://yourdomain.com/api/webhooks/ziina` (see [Ziina webhooks](https://docs.ziina.com/api-reference/webhook/index.md)).
+3. Without `ZIINA_ACCESS_TOKEN`, checkout skips Ziina and behaves as before (order confirmation only).
+
 ## Lottie
 
 Place a Lottie JSON at `public/lottie/loader.json`, then import and pass it to `LoadingScreen` via `animationData`.

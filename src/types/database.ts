@@ -8,6 +8,8 @@ export type OrderStatus =
   | "delivered"
   | "cancelled";
 
+export type PaymentStatus = "unpaid" | "paid" | "failed" | "cancelled";
+
 export type DbCategory = {
   id: string;
   name: string;
@@ -152,6 +154,9 @@ export type DbOrder = {
   shipping_state: string | null;
   shipping_country: string | null;
   shipping_postal_code: string | null;
+  payment_status: PaymentStatus;
+  ziina_payment_intent_id: string | null;
+  paid_at: string | null;
   created_at: string;
   updated_at: string;
 };

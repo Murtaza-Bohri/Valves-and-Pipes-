@@ -3,10 +3,18 @@
 import { useEffect } from "react";
 import { writeGuestCart } from "@/lib/cart";
 
-export function ClearCartOnOrderConfirmation() {
+type ClearCartOnOrderConfirmationProps = {
+  shouldClear?: boolean;
+};
+
+export function ClearCartOnOrderConfirmation({
+  shouldClear = false,
+}: ClearCartOnOrderConfirmationProps) {
   useEffect(() => {
-    writeGuestCart([]);
-  }, []);
+    if (shouldClear) {
+      writeGuestCart([]);
+    }
+  }, [shouldClear]);
 
   return null;
 }

@@ -33,6 +33,7 @@ export type PlaceOrderInput = {
 };
 
 export type PlacedOrder = {
+  id: string;
   orderNumber: string;
   totalAmount: number;
 };
@@ -205,6 +206,7 @@ export async function placeOrder(input: PlaceOrderInput): Promise<
   return {
     ok: true,
     order: {
+      id: order.id,
       orderNumber: order.order_number,
       totalAmount: Number(order.total_amount),
     },

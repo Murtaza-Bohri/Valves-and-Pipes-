@@ -3,6 +3,8 @@
 import { redirect } from "next/navigation";
 import { placeOrder, type ShippingInput } from "@/lib/orders";
 import type { CartLine } from "@/lib/products";
+import { attachZiinaPaymentIntentToOrder } from "@/lib/ziina-orders";
+import { createZiinaPaymentIntent, getZiinaConfig } from "@/lib/ziina";
 
 export type CheckoutActionState = {
   error?: string;
@@ -51,9 +53,31 @@ export async function submitCheckout(
     return { error: result.error };
   }
 
-  redirect(
-    `/order-confirmation?order=${encodeURIComponent(result.order.orderNumber)}&total=${result.order.totalAmount}`
-  );
+  const { order } = result;
+  const ziina = getZiinaConfig();
+
+  if (!ziina.enabled) {
+    redirect(
+      `/order-confirmation?order=${encodeURIComponent(order.orderNumber)}&total=${order.totalAmount}`
+    );
+  }
+
+  const payment = await createZiinaPaymentIntent({
+    amountAed: order.totalAmount,
+    orderId: order.id,
+    orderNumber: order.orderNumber,
+    message: `Himmat Oilfields order ${order.orderNumber}`,
+  });
+
+  if (!payment.ok) {
+    return {
+      error: `${payment.error} Your order ${order.orderNumber} was created but not paid. Contact us or try checkout again.`,
+    };
+  }
+
+  await attachZiinaPaymentIntentToOrder(order.id, payment.intent.id);
+
+  redirect(payment.intent.redirect_url!);
 }
 
 export async function trackOrderAction(
