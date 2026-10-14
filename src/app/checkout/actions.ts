@@ -8,6 +8,8 @@ import { createZiinaPaymentIntent, getZiinaConfig } from "@/lib/ziina";
 
 export type CheckoutActionState = {
   error?: string;
+  /** Set when the browser should navigate to Ziina (external URL). */
+  paymentRedirectUrl?: string;
 };
 
 export async function submitCheckout(
@@ -77,7 +79,13 @@ export async function submitCheckout(
 
   await attachZiinaPaymentIntentToOrder(order.id, payment.intent.id);
 
-  redirect(payment.intent.redirect_url!);
+  const paymentUrl = payment.intent.redirect_url?.trim();
+  if (!paymentUrl) {
+    return { error: "Ziina did not return a payment page URL." };
+  }
+
+  // External payment host — client navigates (reliable on Vercel; server redirect can fail).
+  return { paymentRedirectUrl: paymentUrl };
 }
 
 export async function trackOrderAction(

@@ -50,6 +50,13 @@ export function CheckoutClient({
     });
   }, []);
 
+  useEffect(() => {
+    const url = state.paymentRedirectUrl?.trim();
+    if (url) {
+      window.location.assign(url);
+    }
+  }, [state.paymentRedirectUrl]);
+
   const subtotal = getCartSubtotal(lines);
   const total = subtotal + shippingAmount;
   const defaultAddress = addresses.find((address) => address.id === selectedAddressId);
@@ -154,13 +161,18 @@ export function CheckoutClient({
           )}
 
           {state.error ? <p className="text-sm text-[#bd1115]">{state.error}</p> : null}
+          {state.paymentRedirectUrl ? (
+            <p className="text-sm text-[#6b6b6b]">Redirecting to secure payment…</p>
+          ) : null}
 
           <button
             type="submit"
-            disabled={pending}
+            disabled={pending || Boolean(state.paymentRedirectUrl)}
             className="w-full bg-[#bd1115] px-5 py-3 text-xs font-semibold tracking-[0.14em] text-white uppercase hover:bg-[#9a0e12] disabled:opacity-60"
           >
-            {pending ? "Placing order..." : "Place order"}
+            {pending || state.paymentRedirectUrl
+              ? "Placing order..."
+              : "Place order"}
           </button>
         </form>
       </div>

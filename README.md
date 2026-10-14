@@ -58,7 +58,7 @@ Add to `.env.local` (server-only except site URL):
 | `ZIINA_ACCESS_TOKEN` | Bearer token from [Ziina developer docs](https://docs.ziina.com/developers/custom-integration) |
 | `ZIINA_WEBHOOK_SECRET` | Optional HMAC secret when registering your webhook |
 | `ZIINA_TEST_MODE` | Set to `true` for test payment intents (no real charge) |
-| `NEXT_PUBLIC_SITE_URL` | Public site URL for success/cancel redirects (e.g. `https://yourdomain.com`) |
+| `NEXT_PUBLIC_SITE_URL` | **Production:** your live domain (e.g. `https://www.himmat.ae`) — required on Vercel; do **not** use `http://localhost:3000` in Vercel env vars or Ziina will send customers to the wrong site after payment |
 
 1. Apply migration `supabase/migrations/002_ziina_payments.sql` to your database.
 2. Register webhook URL: `https://yourdomain.com/api/webhooks/ziina` (see [Ziina webhooks](https://docs.ziina.com/api-reference/webhook/index.md)).

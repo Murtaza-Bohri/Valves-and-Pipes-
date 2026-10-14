@@ -1,5 +1,5 @@
 import { createHmac, timingSafeEqual } from "crypto";
-import { getSiteUrl } from "@/lib/site-url";
+import { getPaymentReturnSiteUrl } from "@/lib/site-url";
 
 const ZIINA_API_BASE = "https://api-v2.ziina.com/api";
 
@@ -98,7 +98,7 @@ export async function createZiinaPaymentIntent(
     };
   }
 
-  const siteUrl = getSiteUrl();
+  const siteUrl = await getPaymentReturnSiteUrl();
   const orderQuery = encodeURIComponent(input.orderNumber);
   const successUrl = `${siteUrl}/order-confirmation?order=${orderQuery}&payment_intent_id={PAYMENT_INTENT_ID}`;
   const cancelUrl = `${siteUrl}/order-confirmation?order=${orderQuery}&payment=cancelled`;
